@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2학년 음악 · 음악극의 이해와 비평</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root {
+  --bg: #f2f4f6;
+  --card: #ffffff;
+  --ink: #191f28;
+  --text: #333d4b;
+  --muted: #6b7684;
+  --faint: #8b95a1;
+  --line: #e5e8eb;
+  --blue: #3182f6;
+  --blue-ink: #1b64da;
+  --blue-bg: #e8f3ff;
+  --red: #f04452;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  line-height: 1.55;
+}
+a { color: inherit; text-decoration: none; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 28px 20px 80px; }
+.top {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 22px; color: var(--muted); font-size: 13px; font-weight: 600;
+}
+.top a:hover { color: var(--blue-ink); }
+h1 {
+  margin: 8px 0 0;
+  font-size: 32px; line-height: 1.25; font-weight: 700; letter-spacing: -0.04em;
+}
+.kicker { color: var(--faint); font-size: 13px; font-weight: 600; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 28px; }
+.chip {
+  display: inline-flex; align-items: center; height: 32px; padding: 0 12px;
+  border-radius: 999px; background: #fff; color: var(--text); font-size: 13px; font-weight: 600;
+}
+.chip.blue { background: var(--blue-bg); color: var(--blue-ink); }
+.card {
+  background: var(--card); border-radius: 24px; padding: 22px 22px 8px; margin: 0 0 14px;
+}
+.card h2 {
+  margin: 0 0 14px; font-size: 13px; font-weight: 700; color: var(--faint);
+}
+.task { margin: 0 0 14px; font-size: 16px; color: var(--text); }
+.task b { color: var(--blue); font-weight: 700; margin-right: 6px; }
+.methods { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.method {
+  height: 34px; display: inline-flex; align-items: center; padding: 0 12px;
+  border-radius: 12px; background: var(--bg); color: var(--faint); font-size: 14px; font-weight: 600;
+}
+.method.on { background: var(--blue); color: #fff; }
+.element { padding: 6px 0 18px; border-top: 1px solid var(--line); }
+.element:first-of-type { border-top: 0; }
+.el-head { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; margin: 8px 0 4px; }
+.el-head strong { font-size: 17px; letter-spacing: -0.03em; }
+.el-head span { color: var(--blue-ink); font-weight: 700; font-variant-numeric: tabular-nums; }
+.row {
+  display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: start;
+  padding: 12px 0; border-top: 1px solid #f2f4f6;
+}
+.row p { margin: 0; color: var(--text); font-size: 15px; }
+.score {
+  min-width: 42px; height: 32px; padding: 0 10px; border-radius: 10px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--bg); color: var(--text); font-weight: 700; font-variant-numeric: tabular-nums;
+}
+.score.max { background: var(--blue); color: #fff; }
+.footer-row { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+.std { padding: 14px 0; border-top: 1px solid var(--line); }
+.std .code { color: var(--blue-ink); font-weight: 700; font-size: 13px; }
+.std .desc { margin: 4px 0 10px; color: var(--text); }
+.lv { display: grid; grid-template-columns: 28px 1fr; gap: 10px; padding: 7px 0; }
+.badge {
+  width: 28px; height: 28px; border-radius: 9px; display: flex; align-items: center; justify-content: center;
+  background: var(--bg); font-weight: 700; font-size: 13px; color: var(--text);
+}
+.badge.A { background: var(--blue); color: #fff; }
+.note { color: var(--faint); font-size: 12px; margin-top: 22px; line-height: 1.6; }
+.nav { display: flex; justify-content: space-between; gap: 12px; margin-top: 18px; font-size: 14px; font-weight: 600; }
+.nav a { color: var(--blue-ink); }
+.index-wrap { max-width: 1080px; margin: 0 auto; padding: 36px 24px 80px; }
+.index-wrap h1 { font-size: 40px; margin: 6px 0 8px; }
+.lead { color: var(--muted); font-size: 16px; margin: 0 0 22px; }
+.search {
+  width: 100%; height: 52px; border: 0; border-radius: 16px; padding: 0 18px;
+  font: inherit; font-size: 16px; background: #fff; color: var(--ink); outline: none;
+}
+.grades { display: flex; gap: 8px; margin: 16px 0 22px; }
+.grades button {
+  height: 38px; padding: 0 14px; border: 0; border-radius: 999px; background: #fff;
+  font: inherit; font-weight: 700; color: var(--muted); cursor: pointer;
+}
+.grades button.on { background: var(--ink); color: #fff; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+.subj {
+  background: #fff; border-radius: 22px; padding: 18px 18px 8px;
+}
+.subj h3 { margin: 0 0 4px; font-size: 20px; letter-spacing: -0.03em; }
+.subj .meta { color: var(--faint); font-size: 13px; font-weight: 600; margin-bottom: 10px; }
+.item { display: flex; justify-content: space-between; gap: 10px; padding: 11px 0; border-top: 1px solid #f2f4f6; }
+.item span { color: var(--blue-ink); font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.pdf { display: inline-flex; margin: 8px 0 12px; color: var(--blue-ink); font-size: 13px; font-weight: 700; }
+@media (max-width: 640px) {
+  h1 { font-size: 26px; }
+  .index-wrap h1 { font-size: 30px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a href="../../index.html">소현중학교</a><span>2026학년도 2학기</span></div>
+  <div class="kicker">수행평가 평가 기준</div>
+  <h1>음악극의 이해와 비평</h1>
+  <div class="chips"><span class="chip blue">2학년 음악</span><span class="chip blue">만점 25점</span><span class="chip">2학기</span><span class="chip">논술</span><span class="chip">교사 관찰 및 기록</span></div>
+  <section class="card"><h2>수행 과제</h2><p class="task"><b>01</b>뮤지컬의 발전 과정, 구성요소를 비교하여 이해하기</p><p class="task"><b>02</b>뮤지컬의 공통점과 차이점을 근거와 함께 설명하기</p><p class="task"><b>03</b>작품을 감상하고 줄거리와 음악적 특징을 서술하기</p><p class="task"><b>04</b>작품의 음악적 특징을 근거로 추천하는 글을 논리적으로 작성하기</p></section>
+  <section class="card"><h2>평가 방법</h2><div class="methods"><span class="method">구술 발표</span><span class="method">토의토론</span><span class="method">프로젝트</span><span class="method on">논술</span><span class="method">실험실습</span><span class="method">포트폴리오</span><span class="method">기타</span><span class="method on">교사 관찰 및 기록</span><span class="method">자기평가</span><span class="method">동료평가</span></div></section>
+  <section class="card"><h2>채점 기준</h2><div class="element"><div class="el-head"><strong>오페라와 뮤지컬의 발전 과정 이해하기  오페라와 뮤지컬의</strong><span>5점</span></div><div class="row"><p>발전 과정을 모두 서술하고, 발생 시기와 사회·문화적 배경을 정확히 비교함.</p><span class="score max">5</span></div><div class="row"><p>발전 과정을 모두 서술하였으나 발생 시기 또는 사회·문화적 배경의 설명이 일부 부족함.</p><span class="score">4</span></div><div class="row"><p>발전 과정은 일부 서술하였으나 비교 내용이 누락되거나 부정확함.</p><span class="score">3</span></div><div class="row"><p>발전 과정을 거의 작성하지 못하거나 대부분의 내용이 부정확함.</p><span class="score">2</span></div><div class="row"><p>구성요소를 각각 2가지 이상 정확하게 제시하고, 공통점 1가지와 차이점 2가지 이상을 모두 정확하게 비교하여 서술함.</p><span class="score max">5</span></div></div><div class="element"><div class="el-head"><strong>구성요소, 공통점과 차이점 비교하기</strong><span>5점</span></div><div class="row"><p>구성요소를 각각 1가지 제시하고, 공통점 1가지와 차이점 1가지를 서술하였으나 일부 내용에 오류가 있거나 한 가지 내용이 미흡함.</p><span class="score max">4</span></div><div class="row"><p>제시해야 할 내용의 절반 이상을 작성하였으나 일부 내용이 부정확하거나 누락됨.</p><span class="score">3</span></div><div class="row"><p>구성요소와 공통점, 차이점을 대부분 작성하지 못하였거나, 내용이 대부분 부적절함.</p><span class="score">2</span></div></div><div class="element"><div class="el-head"><strong>대표 작품의 이해 및 감상하기</strong><span>5점</span></div><div class="row"><p>줄거리와 음악적 특징(가락, 리듬, 빠르기, 음색 등)을 모두 정확하게 서술함.</p><span class="score max">5</span></div><div class="row"><p>줄거리와 음악적 특징(가락, 리듬, 빠르기, 음색 등)을 모두 서술하였으나, 일부 내용이 부족하거나 부정확함.</p><span class="score">4</span></div><div class="row"><p>줄거리 또는 음악적 특징(가락, 리듬, 빠르기, 음색 등) 중 한 가지만 서술함.</p><span class="score">3</span></div><div class="row"><p>줄거리와 음악적 특징(가락, 리듬, 빠르기, 음색 등)을 대부분 작성하지 못하거나 잘못 서술함.</p><span class="score">2</span></div></div><div class="element"><div class="el-head"><strong>작품 추천의 타당성 제시하기</strong><span>5점</span></div><div class="row"><p>작품의 음악적 특징을 2가지 이상 근거로 제시하고, 추천 이유와 논리적으로 연결하여 작성함.</p><span class="score max">5</span></div><div class="row"><p>작품의 음악적 특징을 1가지 근거로 제시하여 추천 이유를 작성함.</p><span class="score">4</span></div><div class="row"><p>추천 이유는 있으나 음악적 특징을 근거로 제시하지 못함.</p><span class="score">3</span></div><div class="row"><p>추천 이유를 작성하지 않았거나 과제와 관련 없는 내용을 작성함.</p><span class="score">2</span></div><div class="row"><p>음악 용어를 3가지 이상 적절하게 사용하고, 문장과 문단이 논리적으로 연결되 어 이해하기 쉽게 작성함.</p><span class="score max">5</span></div><div class="row"><p>음악 용어 2가지를 적절하게 사용하고, 글의 구성이 대체로 자연스러움.</p><span class="score">4</span></div><div class="row"><p>음악 용어를 1가지만 사용하거나 용어 사용에 일부 오류가 있으며, 글의 구성이 다소 미흡함.</p><span class="score">3</span></div><div class="row"><p>음악 용어를 사용하지 않았거나 대부분 잘못 사용함.</p><span class="score">2</span></div></div></section>
+  <section class="card"><h2>기본 점수와 미참여</h2><div class="footer-row"><span>기본점수</span><b>10점</b></div><div class="footer-row"><span>자발적 미참여자, 백지활동지 제출자</span><b>9점</b></div><div class="footer-row"><span>의한 수행평가 미참여자(장기미인정결석 등)</span><b>8점</b></div></section>
+  <section class="card"><h2>성취기준별 성취수준</h2><div class="std"><div class="code">[9음02-02]</div><div class="desc">다양한 시대와 문화권의 음악을듣고 음악적 특징과 음</div><div class="lv"><div class="badge A">A</div><div>다양한 시대와 문화권의 음악을 듣고 시대와 문화권에 따른 음악적 특징과 구성을종합적으로 파악하여 표현한다.</div></div><div class="lv"><div class="badge B">B</div><div>다양한 시대와 문화권의 음악을 듣고 시대와 문화권에 따른 음악적 특징과 구성을파악하여 표현한다.</div></div><div class="lv"><div class="badge C">C</div><div>다양한 시대와 문화권의 음악을 듣고 시대와 문화권에 따른 음악적 특징과 구성을부분적으로 파악하여 표현하려고 노력한다.</div></div></div><div class="std"><div class="code">[9음02-03]</div><div class="desc">악의 구성을 파악한다.다양한 시대･사회･ 문화권의 음악을 듣고 음악의 배경과 역할을 비교한다.</div><div class="lv"><div class="badge A">A</div><div>다양한 시대･사회･문화권의 음악을 듣고 음악의 배경과 역할을 종합적으로 파악하여시대･사회･문화적 맥락 속에서 비교하며 구체적으로 설명한다.</div></div><div class="lv"><div class="badge B">B</div><div>다양한 시대･사회･문화권의 음악을 듣고 음악의 배경과 역할을 파악하여 비교하며 설명한다.</div></div><div class="lv"><div class="badge C">C</div><div>다양한 시대･사회･문화권의 음악을 듣고 음악의 배경과 역할을 일부 파악하여부분적으로 비교하며 설명한다.</div></div></div></section>
+  <p class="note">출처: 학교알리미 2026년 9월 공시(3차), 소현중학교 교과별 교수·학습 및 평가 계획. 원문 105쪽.<br><a href="2026-2학기-음악-교수학습및평가계획.pdf">과목 원문 PDF 열기</a></p>
+  <div class="nav"><span></span><a href="02-컵타-연주하기.html">컵타 연주하기 · 다음</a></div>
+</div>
+</body>
+</html>

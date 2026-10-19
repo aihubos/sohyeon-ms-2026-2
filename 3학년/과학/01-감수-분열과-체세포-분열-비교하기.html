@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3학년 과학 · 감수 분열과 체세포 분열 비교하기</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root {
+  --bg: #f2f4f6;
+  --card: #ffffff;
+  --ink: #191f28;
+  --text: #333d4b;
+  --muted: #6b7684;
+  --faint: #8b95a1;
+  --line: #e5e8eb;
+  --blue: #3182f6;
+  --blue-ink: #1b64da;
+  --blue-bg: #e8f3ff;
+  --red: #f04452;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  line-height: 1.55;
+}
+a { color: inherit; text-decoration: none; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 28px 20px 80px; }
+.top {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 22px; color: var(--muted); font-size: 13px; font-weight: 600;
+}
+.top a:hover { color: var(--blue-ink); }
+h1 {
+  margin: 8px 0 0;
+  font-size: 32px; line-height: 1.25; font-weight: 700; letter-spacing: -0.04em;
+}
+.kicker { color: var(--faint); font-size: 13px; font-weight: 600; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 28px; }
+.chip {
+  display: inline-flex; align-items: center; height: 32px; padding: 0 12px;
+  border-radius: 999px; background: #fff; color: var(--text); font-size: 13px; font-weight: 600;
+}
+.chip.blue { background: var(--blue-bg); color: var(--blue-ink); }
+.card {
+  background: var(--card); border-radius: 24px; padding: 22px 22px 8px; margin: 0 0 14px;
+}
+.card h2 {
+  margin: 0 0 14px; font-size: 13px; font-weight: 700; color: var(--faint);
+}
+.task { margin: 0 0 14px; font-size: 16px; color: var(--text); }
+.task b { color: var(--blue); font-weight: 700; margin-right: 6px; }
+.methods { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.method {
+  height: 34px; display: inline-flex; align-items: center; padding: 0 12px;
+  border-radius: 12px; background: var(--bg); color: var(--faint); font-size: 14px; font-weight: 600;
+}
+.method.on { background: var(--blue); color: #fff; }
+.element { padding: 6px 0 18px; border-top: 1px solid var(--line); }
+.element:first-of-type { border-top: 0; }
+.el-head { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; margin: 8px 0 4px; }
+.el-head strong { font-size: 17px; letter-spacing: -0.03em; }
+.el-head span { color: var(--blue-ink); font-weight: 700; font-variant-numeric: tabular-nums; }
+.row {
+  display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: start;
+  padding: 12px 0; border-top: 1px solid #f2f4f6;
+}
+.row p { margin: 0; color: var(--text); font-size: 15px; }
+.score {
+  min-width: 42px; height: 32px; padding: 0 10px; border-radius: 10px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--bg); color: var(--text); font-weight: 700; font-variant-numeric: tabular-nums;
+}
+.score.max { background: var(--blue); color: #fff; }
+.footer-row { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+.std { padding: 14px 0; border-top: 1px solid var(--line); }
+.std .code { color: var(--blue-ink); font-weight: 700; font-size: 13px; }
+.std .desc { margin: 4px 0 10px; color: var(--text); }
+.lv { display: grid; grid-template-columns: 28px 1fr; gap: 10px; padding: 7px 0; }
+.badge {
+  width: 28px; height: 28px; border-radius: 9px; display: flex; align-items: center; justify-content: center;
+  background: var(--bg); font-weight: 700; font-size: 13px; color: var(--text);
+}
+.badge.A { background: var(--blue); color: #fff; }
+.note { color: var(--faint); font-size: 12px; margin-top: 22px; line-height: 1.6; }
+.nav { display: flex; justify-content: space-between; gap: 12px; margin-top: 18px; font-size: 14px; font-weight: 600; }
+.nav a { color: var(--blue-ink); }
+.index-wrap { max-width: 1080px; margin: 0 auto; padding: 36px 24px 80px; }
+.index-wrap h1 { font-size: 40px; margin: 6px 0 8px; }
+.lead { color: var(--muted); font-size: 16px; margin: 0 0 22px; }
+.search {
+  width: 100%; height: 52px; border: 0; border-radius: 16px; padding: 0 18px;
+  font: inherit; font-size: 16px; background: #fff; color: var(--ink); outline: none;
+}
+.grades { display: flex; gap: 8px; margin: 16px 0 22px; }
+.grades button {
+  height: 38px; padding: 0 14px; border: 0; border-radius: 999px; background: #fff;
+  font: inherit; font-weight: 700; color: var(--muted); cursor: pointer;
+}
+.grades button.on { background: var(--ink); color: #fff; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+.subj {
+  background: #fff; border-radius: 22px; padding: 18px 18px 8px;
+}
+.subj h3 { margin: 0 0 4px; font-size: 20px; letter-spacing: -0.03em; }
+.subj .meta { color: var(--faint); font-size: 13px; font-weight: 600; margin-bottom: 10px; }
+.item { display: flex; justify-content: space-between; gap: 10px; padding: 11px 0; border-top: 1px solid #f2f4f6; }
+.item span { color: var(--blue-ink); font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.pdf { display: inline-flex; margin: 8px 0 12px; color: var(--blue-ink); font-size: 13px; font-weight: 700; }
+@media (max-width: 640px) {
+  h1 { font-size: 26px; }
+  .index-wrap h1 { font-size: 30px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a href="../../index.html">소현중학교</a><span>2026학년도 2학기</span></div>
+  <div class="kicker">수행평가 평가 기준</div>
+  <h1>감수 분열과 체세포 분열 비교하기</h1>
+  <div class="chips"><span class="chip blue">3학년 과학</span><span class="chip blue">만점 20점</span><span class="chip">2학기</span><span class="chip">논술</span><span class="chip">교사 관찰 및 기록</span></div>
+  <section class="card"><h2>수행 과제</h2><p class="task"><b>01</b>체세포 분열과 생식세포 분열을 모형으로 분열 과정 단계 표현하기</p><p class="task"><b>02</b>체세포 분열과 생식세포 분열 단계의 특징 설명하기</p><p class="task"><b>03</b>체세포 분열과 생식세포분열 차이점 설명하기</p></section>
+  <section class="card"><h2>평가 방법</h2><div class="methods"><span class="method on">논술</span><span class="method">구술 발표</span><span class="method">토의토론</span><span class="method">프로젝트</span><span class="method">실험실습</span><span class="method">포트폴리오</span><span class="method">기타</span><span class="method on">교사 관찰 및 기록</span><span class="method">자기평가</span><span class="method">동료평가</span></div></section>
+  <section class="card"><h2>채점 기준</h2><div class="element"><div class="el-head"><strong>염색체 모형을 이용하여 체세포 분열 과정 단계 체세포 표현하기 일부  염색체 모형을</strong><span>3점</span></div><div class="row"><p>체세포 분열의 모든 단계 순서에 맞게 배열하고, 염색체 행동 및 분열 전후의 염색체 수 변화를 정확하게 모형으로 표현함.</p><span class="score max">3</span></div><div class="row"><p>분열 각 단계를 순서대로 배열하였으나, 염색체 행동 표현 또는 염색체 수 변화 설명에 오류가 있음.</p><span class="score">2</span></div><div class="row"><p>체세포 분열의 단계 순서 배열이 정확하지 않거나, 각 단계별 염색체 행동 특징을 모형으로 표현하지 못함.</p><span class="score">1</span></div></div><div class="element"><div class="el-head"><strong>이용하여 감수 분열 감수 과정 단계 표현하기 일부</strong><span>3점</span></div><div class="row"><p>감수 분열의 전 과정을 순서대로 배열하고, 염색체 행동 및 분열 전후의 염색체수 변화를 정확하게 표현함.</p><span class="score max">3</span></div><div class="row"><p>분열 각 단계를 순서대로 배열하였으나, 염색체 행동 표현 또는 염색체 수 변화 설명에 오류가 있음.</p><span class="score">2</span></div><div class="row"><p>감수 분열의 단계 순서 배열이 정확하지 않거나, 각 단계별 염색체 행동 특징을 모형으로 표현하지 못함.</p><span class="score">1</span></div></div><div class="element"><div class="el-head"><strong>체세포 분열 과정의 단계 특징 설명하기</strong><span>4점</span></div><div class="row"><p>체세포 분열의 전 과정의 순서와 각 단계별 염색체의 특징적인 행동을 과학적 용어를 용하여 완벽하게 설명함.</p><span class="score max">4</span></div><div class="row"><p>체세포 분열의 순서와 각 단계의 특징을 대부분 올바르게 설명할 수 있으나, 특정 단계 의 핵심 특징을 누락하거나 오개념을 포함하여 서술함.</p><span class="score">3</span></div><div class="row"><p>체세포 분열의 단계를 단편적으로만 나열하거나, 구체적인 단계별 염색체의 행동 특징에 대한 과학적 근거 없이 단순한 사실만을 서술함.</p><span class="score">2</span></div></div><div class="element"><div class="el-head"><strong>감수 1분열 과정 단계 특징 설명하기</strong><span>3점</span></div><div class="row"><p>감수 1분열의 전 과정의 순서와 각 단계별 염색체의 특징적인 행동을 과학적 용어를 용하여 완벽하게 설명함.</p><span class="score max">3</span></div><div class="row"><p>감수 1분열의 순서와 각 단계의 특징을 대부분 올바르게 설명할 수 있으나, 특정 단계의 핵심 특징을 누락하거나 오개념을 포함하여 서술함.</p><span class="score">2</span></div><div class="row"><p>감수 1분열의 단계를 단편적으로만 나열하거나, 구체적인 단계별 염색체의 행동 특징에 대한 과학적 근거 없이 단순한 사실만을 서술함.</p><span class="score">1</span></div></div><div class="element"><div class="el-head"><strong>감수 2분열 과정 단계 특징 설명하기</strong><span>3점</span></div><div class="row"><p>감수 2분열의 전 과정의 순서와 각 단계별 염색체의 특징적인 행동을 과학적 용어를 용하여 완벽하게 설명함.</p><span class="score">3</span></div><div class="row"><p>감수 2분열의 순서와 각 단계의 특징을 대부분 올바르게 설명할 수 있으나, 특정 단계의 핵심 특징을 누락하거나 오개념을 포함하여 서술함.</p><span class="score">2</span></div><div class="row"><p>감수 2분열의 단계를 단편적으로만 나열하거나, 구체적인 단계별 염색체의 행동 특징에 대한 과학적 근거 없이 단순한 사실만을 서술함.</p><span class="score">1</span></div><div class="row"><p>체세포 분열과 감수 분열의 차이점을 비교 기준(분열 횟수, 딸세포 수, 분열 전후의 염색 체 수 변화, 2가 염색체 형성 여부 등)을 바탕으로 모두 정확하게 서술할 수 있으며, 분열이 생물에게 가지는 과학적 의의를 완벽하게 설명함.</p><span class="score max">4</span></div><div class="row"><p>두 세포 분열의 차이점을 설명할 수 있으나, 비교 기준 중 일부를 빠뜨리거나, 두 분열의 특징적인 염색체 행동을 일부 혼동하여 서술함.</p><span class="score">3</span></div><div class="row"><p>분열시 단편적인 장소의 차이만 언급하거나, 구체적인 비교 기준에 대한 과학적 근거 이 두 분열이 서로 다르다는 사실만을 단순 서술함.</p><span class="score">2</span></div></div></section>
+  <section class="card"><h2>기본 점수와 미참여</h2><div class="footer-row"><span>기본점수</span><b>8점</b></div><div class="footer-row"><span>자발적 미참여자, 백지활동지 제출자</span><b>7점</b></div><div class="footer-row"><span>의한 수행평가 미참여자(장기미인정결석 등)</span><b>6점</b></div></section>
+  <section class="card"><h2>성취기준별 성취수준</h2><div class="std"><div class="code">[9과21-02]</div><div class="desc">염색체와 유전자의 관계를 이해하고, 체세포 분열과 생식세포 형성과정의 특징을 염색체의 행동을 중심으로 설명할 수 있다.</div><div class="lv"><div class="badge 상">상</div><div>염색체와 유전자의 관계를 정확히 설명하고, 체세포 분열과 생식세포 형성(감수 분열) 과정에서 염색체행동의 차이점을 비교하여 두 분열 과정의 특징을 구체적으로 설명할 수 있다.</div></div><div class="lv"><div class="badge 중">중</div><div>염색체와 유전자의 관계를 이해하고, 체세포 분열과 생식세포 형성 과정에서 나타나는 염색체의 주요 행동과특징을 설명할 수 있다.</div></div><div class="lv"><div class="badge 하">하</div><div>염색체와 유전자의 개념을 알고, 체세포 분열과 생식세포 형성 과정의 차이를 단순하게 구분할 수 있다.</div></div></div></section>
+  <p class="note">출처: 학교알리미 2026년 9월 공시(3차), 소현중학교 교과별 교수·학습 및 평가 계획. 원문 65쪽.<br><a href="2026-2학기-과학-교수학습및평가계획.pdf">과목 원문 PDF 열기</a></p>
+  <div class="nav"><span></span><a href="02-별까지의-거리와-온도-논술하기.html">별까지의 거리와 온도 논술하기 · 다음</a></div>
+</div>
+</body>
+</html>

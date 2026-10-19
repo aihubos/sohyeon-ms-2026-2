@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2학년 역사 · 신항로 개척과 세계의 변화 논술하기</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root {
+  --bg: #f2f4f6;
+  --card: #ffffff;
+  --ink: #191f28;
+  --text: #333d4b;
+  --muted: #6b7684;
+  --faint: #8b95a1;
+  --line: #e5e8eb;
+  --blue: #3182f6;
+  --blue-ink: #1b64da;
+  --blue-bg: #e8f3ff;
+  --red: #f04452;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  line-height: 1.55;
+}
+a { color: inherit; text-decoration: none; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 28px 20px 80px; }
+.top {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 22px; color: var(--muted); font-size: 13px; font-weight: 600;
+}
+.top a:hover { color: var(--blue-ink); }
+h1 {
+  margin: 8px 0 0;
+  font-size: 32px; line-height: 1.25; font-weight: 700; letter-spacing: -0.04em;
+}
+.kicker { color: var(--faint); font-size: 13px; font-weight: 600; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 28px; }
+.chip {
+  display: inline-flex; align-items: center; height: 32px; padding: 0 12px;
+  border-radius: 999px; background: #fff; color: var(--text); font-size: 13px; font-weight: 600;
+}
+.chip.blue { background: var(--blue-bg); color: var(--blue-ink); }
+.card {
+  background: var(--card); border-radius: 24px; padding: 22px 22px 8px; margin: 0 0 14px;
+}
+.card h2 {
+  margin: 0 0 14px; font-size: 13px; font-weight: 700; color: var(--faint);
+}
+.task { margin: 0 0 14px; font-size: 16px; color: var(--text); }
+.task b { color: var(--blue); font-weight: 700; margin-right: 6px; }
+.methods { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.method {
+  height: 34px; display: inline-flex; align-items: center; padding: 0 12px;
+  border-radius: 12px; background: var(--bg); color: var(--faint); font-size: 14px; font-weight: 600;
+}
+.method.on { background: var(--blue); color: #fff; }
+.element { padding: 6px 0 18px; border-top: 1px solid var(--line); }
+.element:first-of-type { border-top: 0; }
+.el-head { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; margin: 8px 0 4px; }
+.el-head strong { font-size: 17px; letter-spacing: -0.03em; }
+.el-head span { color: var(--blue-ink); font-weight: 700; font-variant-numeric: tabular-nums; }
+.row {
+  display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: start;
+  padding: 12px 0; border-top: 1px solid #f2f4f6;
+}
+.row p { margin: 0; color: var(--text); font-size: 15px; }
+.score {
+  min-width: 42px; height: 32px; padding: 0 10px; border-radius: 10px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--bg); color: var(--text); font-weight: 700; font-variant-numeric: tabular-nums;
+}
+.score.max { background: var(--blue); color: #fff; }
+.footer-row { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+.std { padding: 14px 0; border-top: 1px solid var(--line); }
+.std .code { color: var(--blue-ink); font-weight: 700; font-size: 13px; }
+.std .desc { margin: 4px 0 10px; color: var(--text); }
+.lv { display: grid; grid-template-columns: 28px 1fr; gap: 10px; padding: 7px 0; }
+.badge {
+  width: 28px; height: 28px; border-radius: 9px; display: flex; align-items: center; justify-content: center;
+  background: var(--bg); font-weight: 700; font-size: 13px; color: var(--text);
+}
+.badge.A { background: var(--blue); color: #fff; }
+.note { color: var(--faint); font-size: 12px; margin-top: 22px; line-height: 1.6; }
+.nav { display: flex; justify-content: space-between; gap: 12px; margin-top: 18px; font-size: 14px; font-weight: 600; }
+.nav a { color: var(--blue-ink); }
+.index-wrap { max-width: 1080px; margin: 0 auto; padding: 36px 24px 80px; }
+.index-wrap h1 { font-size: 40px; margin: 6px 0 8px; }
+.lead { color: var(--muted); font-size: 16px; margin: 0 0 22px; }
+.search {
+  width: 100%; height: 52px; border: 0; border-radius: 16px; padding: 0 18px;
+  font: inherit; font-size: 16px; background: #fff; color: var(--ink); outline: none;
+}
+.grades { display: flex; gap: 8px; margin: 16px 0 22px; }
+.grades button {
+  height: 38px; padding: 0 14px; border: 0; border-radius: 999px; background: #fff;
+  font: inherit; font-weight: 700; color: var(--muted); cursor: pointer;
+}
+.grades button.on { background: var(--ink); color: #fff; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+.subj {
+  background: #fff; border-radius: 22px; padding: 18px 18px 8px;
+}
+.subj h3 { margin: 0 0 4px; font-size: 20px; letter-spacing: -0.03em; }
+.subj .meta { color: var(--faint); font-size: 13px; font-weight: 600; margin-bottom: 10px; }
+.item { display: flex; justify-content: space-between; gap: 10px; padding: 11px 0; border-top: 1px solid #f2f4f6; }
+.item span { color: var(--blue-ink); font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.pdf { display: inline-flex; margin: 8px 0 12px; color: var(--blue-ink); font-size: 13px; font-weight: 700; }
+@media (max-width: 640px) {
+  h1 { font-size: 26px; }
+  .index-wrap h1 { font-size: 30px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a href="../../index.html">소현중학교</a><span>2026학년도 2학기</span></div>
+  <div class="kicker">수행평가 평가 기준</div>
+  <h1>신항로 개척과 세계의 변화 논술하기</h1>
+  <div class="chips"><span class="chip blue">2학년 역사</span><span class="chip blue">만점 30점</span><span class="chip">2학기</span><span class="chip">논술</span></div>
+  <section class="card"><h2>수행 과제</h2><p class="task"><b>01</b>신항로 개척의 배경과 과정 설명하기</p><p class="task"><b>02</b>신항로 개척으로 인한 교역망, 아메리카, 아프리카의 변화 설명하기</p><p class="task"><b>03</b>신항로 개척이 미친 영향과 평가를 자신의 관점에서 근거를 바탕으로 설명하기</p></section>
+  <section class="card"><h2>평가 방법</h2><div class="methods"><span class="method on">논술</span><span class="method">구술 발표</span><span class="method">토의토론</span><span class="method">프로젝트</span><span class="method">실험실습</span><span class="method">포트폴리오</span><span class="method">기타</span><span class="method">자기평가</span><span class="method">동료평가 교사 관찰 및 기록</span></div></section>
+  <section class="card"><h2>채점 기준</h2><div class="element"><div class="el-head"><strong>신항로 개척의 배경 설명하기  신항로 개척의 과정</strong><span>5점</span></div><div class="row"><p>신항로 개척의 배경 3가지(정치적, 경제적, 기술적 배경)를 모두 충족하여 서술함.</p><span class="score max">5</span></div><div class="row"><p>신항로 개척의 배경을 2가지만 서술함.</p><span class="score">4</span></div><div class="row"><p>신항로 개척의 배경을 1가지만 서술함.</p><span class="score">3</span></div><div class="row"><p>신항로 개척의 배경을 서술하지 못함.</p><span class="score">2</span></div><div class="row"><p>신항로 개척 과정과 관련한 인물 3명의 활동을 모두 충족하여 서술함.</p><span class="score max">5</span></div></div><div class="element"><div class="el-head"><strong>설명하기  신항로 개척으로</strong><span>5점</span></div><div class="row"><p>신항로 개척 과정과 관련한 인물 2명의 활동을 서술함.</p><span class="score">4</span></div><div class="row"><p>신항로 개척 과정과 관련한 인물 1명의 활동을 서술함.</p><span class="score">3</span></div><div class="row"><p>신항로 개척 과정과 관련한 인물의 활동을 서술하지 못함.</p><span class="score">2</span></div><div class="row"><p>신항로 개척으로 인한 세계 교역망의 변화 4가지를 모두 충족하여 서술함.</p><span class="score max">5</span></div></div><div class="element"><div class="el-head"><strong>인한 세계 교역망의 변화 설명하기  신항로 개척으로 인한</strong><span>5점</span></div><div class="row"><p>.신항로 개척으로 인한 세계 교역망의 변화를 3가지만 서술함</p><span class="score max">4</span></div><div class="row"><p>신항로 개척으로 인한 세계 교역망의 변화를 2가지만 서술함.</p><span class="score">3</span></div><div class="row"><p>신항로 개척으로 인한 세계 교역망의 변화를 1가지만 서술함.</p><span class="score">2</span></div><div class="row"><p>신항로 개척으로 인한 세계 교역망의 변화를 서술하지 못함.</p><span class="score">1</span></div></div><div class="element"><div class="el-head"><strong>아메리카의 변화 설명하기  신항로 개척으로 인한</strong><span>5점</span></div><div class="row"><p>신항로 개척으로 인한 아메리카의 변화 2가지를 모두 충족하여 서술함.</p><span class="score max">5</span></div><div class="row"><p>신항로 개척으로 인한 아메리카의 변화를 1가지만 서술함.</p><span class="score">4</span></div><div class="row"><p>신항로 개척으로 인한 아메리카의 변화를 서술하지 못함.</p><span class="score">3</span></div><div class="row"><p>신항로 개척으로 인한 아프리카의 변화 2가지를 모두 충족하여 서술함.</p><span class="score max">5</span></div></div><div class="element"><div class="el-head"><strong>아프리카의 변화 설명하기</strong><span>5점</span></div><div class="row"><p>신항로 개척으로 인한 아메리카의 변화를 1가지만 서술함.</p><span class="score">4</span></div><div class="row"><p>신항로 개척으로 인한 아메리카의 변화를 서술하지 못함.</p><span class="score">3</span></div><div class="row"><p>신항로 개척의 긍정적 영향 1가지(구체적 사례 제시), 부정적 영향 1가지(구체적 사례 종합적 평가, 출처(1가지) 4가지를 모두 충족하여 서술함.</p><span class="score max">5</span></div></div><div class="element"><div class="el-head"><strong>신항로 개척이 미친 영향 설명하기</strong><span>5점</span></div><div class="row"><p>위 수행 수준 중 1가지 기준이 부족함.</p><span class="score max">4</span></div><div class="row"><p>위 수행 수준 중 2가지 기준이 부족함.</p><span class="score">3</span></div><div class="row"><p>위 수행 수준 중 3가지 기준이 부족함.</p><span class="score">2</span></div><div class="row"><p>위 수행 수준 4가지를 모두 서술하지 못함.</p><span class="score">1</span></div></div></section>
+  <section class="card"><h2>기본 점수와 미참여</h2><div class="footer-row"><span>기본점수</span><b>12점</b></div><div class="footer-row"><span>자발적 미참여자, 백지활동지 제출자</span><b>11점</b></div><div class="footer-row"><span>학업성적관리규정에 의한 수행평가 미참여자(장기미인정결석 등)</span><b>10점</b></div></section>
+  <section class="card"><h2>성취기준별 성취수준</h2><div class="std"><div class="code">[9역04-03]</div><div class="desc">오스만 제국의성장과 유럽 사회의근대적 변화를 조사한다.</div><div class="lv"><div class="badge A">A</div><div>오스만 제국의 성장과 유럽 사회의 근대적 변화를 나타내는 자료를 수집, 분석하여 그 변화상을역사적 맥락에서 설명할 수 있다.</div></div><div class="lv"><div class="badge B">B</div><div>오스만 제국의 성장과 유럽 사회의 근대적 변화를 자료를 통해 분석할 수 있다.</div></div><div class="lv"><div class="badge C">C</div><div>오스만 제국의 성장과 유럽 사회의 근대적 변화 양상을 제시할 수 있다.</div></div><div class="lv"><div class="badge D">D</div><div>오스만 제국의 성장과 유럽 사회의 근대적 변화의 사례를 말할 수 있다.</div></div><div class="lv"><div class="badge E">E</div><div>오스만 제국이 성장하고 유럽 사회가 근대적으로 변화했음을 말할 수 있다.</div></div></div></section>
+  <p class="note">출처: 학교알리미 2026년 9월 공시(3차), 소현중학교 교과별 교수·학습 및 평가 계획. 원문 39쪽.<br><a href="2026-2학기-역사-교수학습및평가계획.pdf">과목 원문 PDF 열기</a></p>
+  <div class="nav"><span></span><a href="02-시민-혁명-보고서-작성하기.html">시민 혁명 보고서 작성하기 · 다음</a></div>
+</div>
+</body>
+</html>

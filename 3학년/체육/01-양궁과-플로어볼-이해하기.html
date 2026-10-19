@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3학년 체육 · 양궁과 플로어볼 이해하기</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root {
+  --bg: #f2f4f6;
+  --card: #ffffff;
+  --ink: #191f28;
+  --text: #333d4b;
+  --muted: #6b7684;
+  --faint: #8b95a1;
+  --line: #e5e8eb;
+  --blue: #3182f6;
+  --blue-ink: #1b64da;
+  --blue-bg: #e8f3ff;
+  --red: #f04452;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  line-height: 1.55;
+}
+a { color: inherit; text-decoration: none; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 28px 20px 80px; }
+.top {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 22px; color: var(--muted); font-size: 13px; font-weight: 600;
+}
+.top a:hover { color: var(--blue-ink); }
+h1 {
+  margin: 8px 0 0;
+  font-size: 32px; line-height: 1.25; font-weight: 700; letter-spacing: -0.04em;
+}
+.kicker { color: var(--faint); font-size: 13px; font-weight: 600; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 28px; }
+.chip {
+  display: inline-flex; align-items: center; height: 32px; padding: 0 12px;
+  border-radius: 999px; background: #fff; color: var(--text); font-size: 13px; font-weight: 600;
+}
+.chip.blue { background: var(--blue-bg); color: var(--blue-ink); }
+.card {
+  background: var(--card); border-radius: 24px; padding: 22px 22px 8px; margin: 0 0 14px;
+}
+.card h2 {
+  margin: 0 0 14px; font-size: 13px; font-weight: 700; color: var(--faint);
+}
+.task { margin: 0 0 14px; font-size: 16px; color: var(--text); }
+.task b { color: var(--blue); font-weight: 700; margin-right: 6px; }
+.methods { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.method {
+  height: 34px; display: inline-flex; align-items: center; padding: 0 12px;
+  border-radius: 12px; background: var(--bg); color: var(--faint); font-size: 14px; font-weight: 600;
+}
+.method.on { background: var(--blue); color: #fff; }
+.element { padding: 6px 0 18px; border-top: 1px solid var(--line); }
+.element:first-of-type { border-top: 0; }
+.el-head { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; margin: 8px 0 4px; }
+.el-head strong { font-size: 17px; letter-spacing: -0.03em; }
+.el-head span { color: var(--blue-ink); font-weight: 700; font-variant-numeric: tabular-nums; }
+.row {
+  display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: start;
+  padding: 12px 0; border-top: 1px solid #f2f4f6;
+}
+.row p { margin: 0; color: var(--text); font-size: 15px; }
+.score {
+  min-width: 42px; height: 32px; padding: 0 10px; border-radius: 10px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--bg); color: var(--text); font-weight: 700; font-variant-numeric: tabular-nums;
+}
+.score.max { background: var(--blue); color: #fff; }
+.footer-row { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+.std { padding: 14px 0; border-top: 1px solid var(--line); }
+.std .code { color: var(--blue-ink); font-weight: 700; font-size: 13px; }
+.std .desc { margin: 4px 0 10px; color: var(--text); }
+.lv { display: grid; grid-template-columns: 28px 1fr; gap: 10px; padding: 7px 0; }
+.badge {
+  width: 28px; height: 28px; border-radius: 9px; display: flex; align-items: center; justify-content: center;
+  background: var(--bg); font-weight: 700; font-size: 13px; color: var(--text);
+}
+.badge.A { background: var(--blue); color: #fff; }
+.note { color: var(--faint); font-size: 12px; margin-top: 22px; line-height: 1.6; }
+.nav { display: flex; justify-content: space-between; gap: 12px; margin-top: 18px; font-size: 14px; font-weight: 600; }
+.nav a { color: var(--blue-ink); }
+.index-wrap { max-width: 1080px; margin: 0 auto; padding: 36px 24px 80px; }
+.index-wrap h1 { font-size: 40px; margin: 6px 0 8px; }
+.lead { color: var(--muted); font-size: 16px; margin: 0 0 22px; }
+.search {
+  width: 100%; height: 52px; border: 0; border-radius: 16px; padding: 0 18px;
+  font: inherit; font-size: 16px; background: #fff; color: var(--ink); outline: none;
+}
+.grades { display: flex; gap: 8px; margin: 16px 0 22px; }
+.grades button {
+  height: 38px; padding: 0 14px; border: 0; border-radius: 999px; background: #fff;
+  font: inherit; font-weight: 700; color: var(--muted); cursor: pointer;
+}
+.grades button.on { background: var(--ink); color: #fff; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+.subj {
+  background: #fff; border-radius: 22px; padding: 18px 18px 8px;
+}
+.subj h3 { margin: 0 0 4px; font-size: 20px; letter-spacing: -0.03em; }
+.subj .meta { color: var(--faint); font-size: 13px; font-weight: 600; margin-bottom: 10px; }
+.item { display: flex; justify-content: space-between; gap: 10px; padding: 11px 0; border-top: 1px solid #f2f4f6; }
+.item span { color: var(--blue-ink); font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.pdf { display: inline-flex; margin: 8px 0 12px; color: var(--blue-ink); font-size: 13px; font-weight: 700; }
+@media (max-width: 640px) {
+  h1 { font-size: 26px; }
+  .index-wrap h1 { font-size: 30px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a href="../../index.html">소현중학교</a><span>2026학년도 2학기</span></div>
+  <div class="kicker">수행평가 평가 기준</div>
+  <h1>양궁과 플로어볼 이해하기</h1>
+  <div class="chips"><span class="chip blue">3학년 체육</span><span class="chip blue">만점 20점</span><span class="chip">2학기</span><span class="chip">논술</span><span class="chip">교사 관찰 및 기록</span></div>
+  <section class="card"><h2>수행 과제</h2><p class="task"><b>01</b>양궁의 올바른 자세, 안전 사고 유형 및 예방법, 심리 조절 기술을 이해하고 본인의 수행에 적용하기</p><p class="task"><b>02</b>플로어볼 경기 중 발생할 수 있는 반칙 유형, 경기 기술의 적절한 활용, 공격 전술 및 수비 전술을 이해하고 설명하기</p></section>
+  <section class="card"><h2>평가 방법</h2><div class="methods"><span class="method on">논술</span><span class="method">구술 발표</span><span class="method">토의토론</span><span class="method">프로젝트</span><span class="method">실험실습</span><span class="method">포트폴리오</span><span class="method">기타</span><span class="method on">교사 관찰 및 기록</span><span class="method">자기평가</span><span class="method">동료평가</span></div></section>
+  <section class="card"><h2>채점 기준</h2><div class="element"><div class="el-head"><strong>양궁과 플로어볼에서 활용되는 경기 기술 및 전술 설명하기</strong><span>20점</span></div><div class="row"><p>6가지를 만족하는 경우</p><span class="score max">20</span></div><div class="row"><p>양궁 자세 6단계를 이해하고, 각 단계의 자세가 중요한 5가지를 만족하는 경우이유를 설명함</p><span class="score">18</span></div><div class="row"><p>양궁 시 발생할 수 있는 안전사고 유형 및 예방법을 4가지를 만족하는 경우설명함</p><span class="score">16</span></div><div class="row"><p>심리 조절 기술을 이해하고 본인의 수행에 적용함 3가지를 만족하는 경우플로어볼 경기 중 발생하는 반칙 유형을 이해하고</p><span class="score">14</span></div><div class="row"><p>올바른 행동을 설명함 2가지를 만족하는 경우플로어볼 경기 기술(패스, 드리블)을 적절하게 사용</p><span class="score">12</span></div><div class="row"><p>하는 방법을 작성함 1가지를 만족하는 경우플로어볼 경기 중 공격 전술 및 수비 전술을 이해</p><span class="score">10</span></div><div class="row"><p>하고 적용함 하나도 만족하지 못한 경우</p><span class="score">8</span></div></div></section>
+  <section class="card"><h2>기본 점수와 미참여</h2><div class="footer-row"><span>기본점수</span><b>8점</b></div><div class="footer-row"><span>자발적 미참여자, 백지활동지 제출자</span><b>7점</b></div><div class="footer-row"><span>의한 수행평가 미참여자(장기미인정결석 등)</span><b>6점</b></div></section>
+  <section class="card"><h2>성취기준별 성취수준</h2><div class="std"><div class="code">[9체02-04]</div><div class="desc">동작 도전 스포츠 활동 중 어려움과 두려움을 느끼는 활동 과제를통해 도전 정신과 자신의 한계를 극복하는 능력을 기른</div><div class="lv"><div class="badge 상">상</div><div>동작 도전 스포츠 활동 중 어려움과 두려움을 느끼는 활동 과제를 통해 도전 정신을발휘하고, 지속적으로자신의한계를 극복하는 활동을 실천할 수 있다.</div></div><div class="lv"><div class="badge 중">중</div><div>동작 도전 스포츠 활동 중 어려움과 두려움을 느끼는 활동 과제를 통해도전 정신을 발휘하고, 간헐적으로자신의한계를 극복하는 활동을 실천할 수 있다.</div></div><div class="lv"><div class="badge 하">하</div><div>동작 도전 스포츠 활동 중 어려움과 두려움을 느끼는 활동 과제를 통해 도전 정신을 발휘하고 자신의 한계를극복하려는 의지를 보인다.</div></div></div><div class="std"><div class="code">[9체03-03]</div><div class="desc">다. 영역형 경쟁스포츠의 경기 방법과 전략을 이해하고 경기에 활용할수 있으며, 경기 상황에 맞</div><div class="lv"><div class="badge 상">상</div><div>영역형 경쟁 스포츠의 경기 방법과 전략을 이해하고 경기에 활용할 수 있으며, 경기 상황에 맞게 전략을 진단하여 창의적으로 적용할 수 있다.</div></div><div class="lv"><div class="badge 중">중</div><div>영역형 경쟁 스포츠의 경기 방법과 전략을 이해하고, 경기에 활용할 수 있다.</div></div><div class="lv"><div class="badge 하">하</div><div>조작적 상황에서 영역형 경쟁 스포츠의 경기 방법과 전략을 따라할 수 있다.</div></div></div><div class="std"><div class="code">[9체03-11]</div><div class="desc">게 전략을 진단하여 창의적으로 적용한다.네트형 스포츠의 경기 방법과 전략을이해하고 경기에 활용할 수있으며, 경기 상황에 맞게전략을 진단하여 창의적으로 적용한다.</div><div class="lv"><div class="badge 상">상</div><div>네트형 스포츠의 경기 방법과 전략을 이해하고 경기에 활용할 수 있으며, 경기 상황에 맞게 전략을 진단하여창의적으로 적용할 수 있다.</div></div><div class="lv"><div class="badge 중">중</div><div>네트형 스포츠의 경기 방법과 전략을 이해하고, 경기에 활용할 수 있다.</div></div><div class="lv"><div class="badge 하">하</div><div>조작적 상황에서 네트형 스포츠의 경기 방법과 전략을 따라할 수 있다.</div></div></div></section>
+  <p class="note">출처: 학교알리미 2026년 9월 공시(3차), 소현중학교 교과별 교수·학습 및 평가 계획. 원문 110쪽.<br><a href="2026-2학기-체육-교수학습및평가계획.pdf">과목 원문 PDF 열기</a></p>
+  <div class="nav"><span></span><a href="02-양궁-표적-맞히기.html">양궁 표적 맞히기 · 다음</a></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>소현중학교 2026학년도 2학기 수행평가 기준</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root {
+  --bg: #f2f4f6;
+  --card: #ffffff;
+  --ink: #191f28;
+  --text: #333d4b;
+  --muted: #6b7684;
+  --faint: #8b95a1;
+  --line: #e5e8eb;
+  --blue: #3182f6;
+  --blue-ink: #1b64da;
+  --blue-bg: #e8f3ff;
+  --red: #f04452;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  line-height: 1.55;
+}
+a { color: inherit; text-decoration: none; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 28px 20px 80px; }
+.top {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 22px; color: var(--muted); font-size: 13px; font-weight: 600;
+}
+.top a:hover { color: var(--blue-ink); }
+h1 {
+  margin: 8px 0 0;
+  font-size: 32px; line-height: 1.25; font-weight: 700; letter-spacing: -0.04em;
+}
+.kicker { color: var(--faint); font-size: 13px; font-weight: 600; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 28px; }
+.chip {
+  display: inline-flex; align-items: center; height: 32px; padding: 0 12px;
+  border-radius: 999px; background: #fff; color: var(--text); font-size: 13px; font-weight: 600;
+}
+.chip.blue { background: var(--blue-bg); color: var(--blue-ink); }
+.card {
+  background: var(--card); border-radius: 24px; padding: 22px 22px 8px; margin: 0 0 14px;
+}
+.card h2 {
+  margin: 0 0 14px; font-size: 13px; font-weight: 700; color: var(--faint);
+}
+.task { margin: 0 0 14px; font-size: 16px; color: var(--text); }
+.task b { color: var(--blue); font-weight: 700; margin-right: 6px; }
+.methods { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.method {
+  height: 34px; display: inline-flex; align-items: center; padding: 0 12px;
+  border-radius: 12px; background: var(--bg); color: var(--faint); font-size: 14px; font-weight: 600;
+}
+.method.on { background: var(--blue); color: #fff; }
+.element { padding: 6px 0 18px; border-top: 1px solid var(--line); }
+.element:first-of-type { border-top: 0; }
+.el-head { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; margin: 8px 0 4px; }
+.el-head strong { font-size: 17px; letter-spacing: -0.03em; }
+.el-head span { color: var(--blue-ink); font-weight: 700; font-variant-numeric: tabular-nums; }
+.row {
+  display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: start;
+  padding: 12px 0; border-top: 1px solid #f2f4f6;
+}
+.row p { margin: 0; color: var(--text); font-size: 15px; }
+.score {
+  min-width: 42px; height: 32px; padding: 0 10px; border-radius: 10px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--bg); color: var(--text); font-weight: 700; font-variant-numeric: tabular-nums;
+}
+.score.max { background: var(--blue); color: #fff; }
+.footer-row { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+.std { padding: 14px 0; border-top: 1px solid var(--line); }
+.std .code { color: var(--blue-ink); font-weight: 700; font-size: 13px; }
+.std .desc { margin: 4px 0 10px; color: var(--text); }
+.lv { display: grid; grid-template-columns: 28px 1fr; gap: 10px; padding: 7px 0; }
+.badge {
+  width: 28px; height: 28px; border-radius: 9px; display: flex; align-items: center; justify-content: center;
+  background: var(--bg); font-weight: 700; font-size: 13px; color: var(--text);
+}
+.badge.A { background: var(--blue); color: #fff; }
+.note { color: var(--faint); font-size: 12px; margin-top: 22px; line-height: 1.6; }
+.nav { display: flex; justify-content: space-between; gap: 12px; margin-top: 18px; font-size: 14px; font-weight: 600; }
+.nav a { color: var(--blue-ink); }
+.index-wrap { max-width: 1080px; margin: 0 auto; padding: 36px 24px 80px; }
+.index-wrap h1 { font-size: 40px; margin: 6px 0 8px; }
+.lead { color: var(--muted); font-size: 16px; margin: 0 0 22px; }
+.search {
+  width: 100%; height: 52px; border: 0; border-radius: 16px; padding: 0 18px;
+  font: inherit; font-size: 16px; background: #fff; color: var(--ink); outline: none;
+}
+.grades { display: flex; gap: 8px; margin: 16px 0 22px; }
+.grades button {
+  height: 38px; padding: 0 14px; border: 0; border-radius: 999px; background: #fff;
+  font: inherit; font-weight: 700; color: var(--muted); cursor: pointer;
+}
+.grades button.on { background: var(--ink); color: #fff; }
+.downloads { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin: 0 0 18px; }
+.dl {
+  display: inline-flex; align-items: center; height: 44px; padding: 0 16px;
+  border-radius: 14px; background: var(--blue); color: #fff; font-weight: 700; font-size: 15px;
+}
+.dl:hover { background: var(--blue-ink); }
+.downloads span { color: var(--faint); font-size: 13px; font-weight: 600; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+.subj {
+  background: #fff; border-radius: 22px; padding: 18px 18px 8px;
+}
+.subj h3 { margin: 0 0 4px; font-size: 20px; letter-spacing: -0.03em; }
+.subj .meta { color: var(--faint); font-size: 13px; font-weight: 600; margin-bottom: 10px; }
+.item { display: flex; justify-content: space-between; gap: 10px; padding: 11px 0; border-top: 1px solid #f2f4f6; }
+.item span { color: var(--blue-ink); font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.pdf { display: inline-flex; margin: 8px 0 12px; color: var(--blue-ink); font-size: 13px; font-weight: 700; }
+@media (max-width: 640px) {
+  h1 { font-size: 26px; }
+  .index-wrap h1 { font-size: 30px; }
+}
+</style>
+</head>
+<body>
+<div class="index-wrap">
+  <div class="kicker">학교알리미 · 2026년 9월 공시</div>
+  <h1>소현중학교<br>수행평가 기준</h1>
+  <p class="lead">2026학년도 2학기. 학년별 공시 PDF를 과목으로 나누고, 수행평가마다 채점 기준을 따로 정리했습니다.</p>
+  <div class="downloads">
+    <a class="dl" href="downloads/소현중학교-2026-2학기-수행평가.zip" download>전체 파일 한번에 받기</a>
+    <span>학년 · 과목 폴더, 수행평가 HTML, 원문 PDF</span>
+  </div>
+  <input class="search" id="q" placeholder="과목이나 수행평가 이름 검색" autofocus>
+  <div class="grades" id="grades">
+    <button class="on" data-grade="all">전체</button>
+    <button data-grade="1학년">1학년</button>
+    <button data-grade="2학년">2학년</button>
+    <button data-grade="3학년">3학년</button>
+  </div>
+  <div class="grid" id="grid"><article class="subj" data-grade="1학년" data-text="1학년 국어 나의 경험 표현하기 품사와 어휘 분석하기 비평문 쓰기">
+<h3>국어</h3>
+<div class="meta">1학년 · 수행평가 3개</div>
+<a class="pdf" href="1학년/국어/2026-2학기-국어-교수학습및평가계획.pdf">과목 원문 PDF</a>
+<a class="item" href="1학년/국어/01-나의-경험-표현하기.html"><div>나의 경험 표현하기</div><span>10점</span></a><a class="item" href="1학년/국어/02-품사와-어휘-분석하기.html"><div>품사와 어휘 분석하기</div><span>20점</span></a><a class="item" href="1학년/국어/03-비평문-쓰기.html"><div>비평문 쓰기</div><span>20점</span></a>
+</article><article class="subj" data-grade="1학년" data-text="1학년 도덕 가상공간과 윤리적 태도에 관한 글쓰기 인권의 소중함에 관한 글쓰기 통일 타이포셔너리 제작하기 생명 존중 필요성을 알리는 카드뉴스 만들기">
+<h3>도덕</h3>
+<div class="meta">1학년 · 수행평가 4개</div>
+<a class="pdf" href="1학년/도덕/2026-2학기-도덕-교수학습및평가계획.pdf">과목 원문 PDF</a>
+<a class="item" href="1학년/도덕/01-가상공간과-윤리적-태도에-관한-글쓰기.html"><div>가상공간과 윤리적 태도에 관한 글쓰기</div><span>20점</span></a><a class="item" href="1학년/도덕/02-인권의-소중함에-관한-글쓰기.html"><div>인권의 소중함에 관한 글쓰기</div><span>30점</span></a><a class="item" href="1학년/도덕/03-통일-타이포셔너리-제작하기.html"><div>통일 타이포셔너리 제작하기</div><span>20점</span></a><a class="item" href="1학년/도덕/04-생명-존중-필요성을-알리는-카드뉴스-만들기.html"><div>생명 존중 필요성을 알리는 카드뉴스 만들기</div><span>30점</span></a>
+</article><article class="subj" data-grade="1학년" data-text="1학년 사회 갈등과 차별 글쓰기 문화의 이해 글쓰기">
+<h3>사회</h3>
+<div class="meta">1학년 · 수행평가 2개</div>
+<a class="pdf" href="1학년/사회/2026-2학기-사회-교수학습및평가계획.pdf">과목 원문 PDF</a>
+<a class="item" href="1학년/사회/01-갈등과-차별-글쓰기.html"><div>갈등과 차별 글쓰기</div><span>20점</span></a><a class="item" href="1학년/사회/02-문화의-이해-글쓰기.html"><div>문화의 이해 글쓰기</div><span>30점</span></a>
+</article><article class="subj" data-grade="1학년" data-text="1학년 수학 작도 및 삼각형의 합동을 이용한 문제 해결 도형의 성질을 이용한 문제 해결 도형과 통계 탐구 과정 포트폴리오">
+<h3>수학</h3>
+<div class="meta">1학년 · 수행평가 3개</div>
+<a class="pdf" href="1학년/수학/2026-2학기-수학-교수학습및평가계획.pdf">과목 원문 PDF</a>
+<a class="item" href="1학년/수학/01-작도-및-삼각형의-합동을-이용한-문제-해결.html"><div>작도 및 삼각형의 합동을 이용한 문제 해결</div><span>20점</span></a><a class="item" href="1학년/수학/02-도형의-성질을-이용한-문제-해결.html"><div>도형의 성질을 이용한 문제 해결</div><span>20점</span></a><a class="item" href="1학년/수학/03-도형과-통계-탐구-과정-포트폴리오.html"><div>도형과 통계 탐구 과정 포트폴리오</div><span>10점</span></a>
+</article><article class="subj" data-grade="1학년" data-text="1학년 과학 용수철의 탄성력 측정하기 압력에 따른 기체의 부피 변화 알아보기">
+<h3>과학</h3>
+<div class="meta">1학년 · 수행평가 2개</div>
+<a class="pdf" href="1학년/과학/2026-2학기-과학-교수학습및평가계획.pdf">과목 원문 PDF</a>
+<a class="item" href="1학년/과학/01-용수철의-탄성력-측정하기.html"><div>용수철의 탄성력 측정하기</div><span>25점</span></a><a class="item" href="1학년/과학/02-압력에-따른-기체의-부피-변화-알아보기.html"><div>압력에 따른 기체의 부피 변화 알아보기</div><span>25점</span></a>
+</article><article class="subj" data-grade="1학년" data-text="1학년 기술·가정 청소년의 이해 배움일기 쓰기 청소년의 성에 대해 논술하기 모형자동차 만들기 친환경 에너지 의견 제시하기">
+<h3>기술·가정</h3>
+<div class="meta">1학년 · 수행평가 4개</div>
+<a class="pdf" href="1학년/기술·가정/2026-2학기-기술·가정-교수학습및평가계획.pdf">과목 원문 PDF</a>
+<a class="item" href="1학년/기술·가정/01-청소년의-이해-배움일기-쓰기.html"><div>청소년의 이해 배움일기 쓰기</div><span>20점</span></a><a class="item" href="1학년/기술·가정/02-청소년의-성에-대해-논술하기.html"><div>청소년의 성에 대해 논술하기</div><span>30점</span></a><a class="item" href="1학년/기술·가정/03-모형자동차-만들기.html"><div>모형자동차 만들기</div><span>20점</span></a><a class="item" href="1학년/기술·가정/04-친환경-에너지-의견-제시하기.html"><div>친환경 에너지 의견 제시하기</div><span>30점</span></a>
+</article><article class="subj" data-grade="1학년" data-text="1학년 미술 현대 미술 읽기 재현 표현하기 상상동물 만들기 관찰과 발상하기">
+<h3>미술</h3>
+<div class="meta">1학년 · 수행평가 4개</div>
+<a class="pdf" href="1학년/미술/2026-2학기-미술-교수학습및평가계획.pdf">과목 원문 PDF</a>
+<a class="item" href="1학년/미술/01-현대-미술-읽기.html"><div>현대 미술 읽기</div><span>20점</span></a><a class="item" href="1학년/미술/02-재현-표현하기.html"><div>재현 표현하기</div><span>30점</span></a><a class="item" href="1학년/미술/03-상상동물-만들기.html"><div>상상동물 만들기</div><span>30점</span></a><a class="item" href="1학년/미술/04-관찰과-발상하기.html"><div>관찰과 발상하기</div><span>20점</span></a>
+</article><article class="subj" data-grade="1학년" data-text="1학년 체육 운동과 체력, 건강 이해하고 논술하기 줄넘기 단계별 넘기 디스크 목표지점에 넣기 배드민턴 숏 서비스하기">
+<h3>체육</h3>
+<div class="meta">1학년 · 수행평가 4개</div>
+<a class="pdf" href="1학년/체육/2026-2학기-체육-교수학습및평가계획.pdf">과목 원문 PDF</a>
+<a class="item" href="1학년/체육/01-운동과-체력,-건강-이해하고-논술하기.html"><div>운동과 체력, 건강 이해하고 논술하기</div><span>25점</span></a><a class="item" href="1학년/체육/02-줄넘기-단계별-넘기.html"><div>줄넘기 단계별 넘기</div><span>25점</span></a><a class="item" href="1학년/체육/03-디스크-목표지점에-넣기.html"><div>디스크 목표지점에 넣기</div><span>25점</span></a><a class="item" href="1학년/체육/04-배드민턴-숏-서비스하기.html"><div>배드민턴 숏 서비스하기</div><span>25점</span></a>
+</article><article class="subj" data-grade="1학년" data-text="1학년 영어 주어진 어법과 어휘를 활용한 글쓰기 주어진 주제에 적합한 글을 쓰고 발표하기">
+<h3>영어</h3>
+<div class="meta">1학년 · 수행평가 2개</div>
+<a class="pdf" href="1학년/영어/2026-2학기-영어-교수학습및평가계획.pdf">과목 원문 PDF</a>
+<a class="item" href="1학년/영어/01-주어진-어법과-어휘를-활용한-글쓰기.html"><div>주어진 어법과 어휘를 활용한 글쓰기</div><span>25점</span></a><a class="item" href="1학년/영어/02-주어진-주제에-적합한-글을-쓰고-발표하기.html"><div>주어진 주제에 적합한 글을 쓰고 발표하기</div><span>25점</span></a>
+</article><article class="subj" data-grade="1학년" data-text="1학년 한문 천간지지 탐구 나의 호짓기 기초한자 익히기 한문 독해 및 활용 포트폴리오">
+<h3>한문</h3>
+<div class="meta">1학년 · 수행평가 4개</div>
+<a class="pdf" href="1학년/한문/2026-2학기-한문-교수학습및평가계획.pdf">과목 원문 PDF</a>
+<a class="item" href="1학년/한문/01-천간지지-탐구.html"><div>천간지지 탐구</div><span>20점</span></a><a class="item" href="1학년/한문/02-나의-호짓기.html"><div>나의 호짓기</div><span>30점</span></a><a class="item" href="1학년/한문/03-기초한자-익히기.html"><div>기초한자 익히기</div><span>20점</span></a><a class="item" href="1학년/한문/04-한문-독해-및-활용-포트폴리오.html"><div>한문 독해 및 활용 포트폴리오</div><span>30점</span></a>
+</article><article class="subj" data-grade="2학년" data-text="2학년 국어 발표 자료 구성하기 복합양식 자료 활용 글 쓰기">
+<h3>국어</h3>
+<div class="meta">2학년 · 수행평가 2개</div>
+<a class="pdf" href="2학년/국어/2026-2학기-국어-교수학습및평가계획.pdf">과목 원문 PDF</a>
+<a class="item" href="2학년/국어/01-발표-자료-구성하기.html"><div>발표 자료 구성하기</div><span>20점</span></a><a class="item" href="2학년/국어/02-복합양식-자료-활용-글-쓰기.html"><div>복합양식 자료 활용 글 쓰기</div><span>10점</span></a>
+</article><article class="subj" data-grade="2학년" data-text="2학년 도덕 성의 도덕적 의미 논술하기 정의로운 사회의 모습 논술하기 국가와 시민의 바람직한 관계 구술하기 가치탐구활동">
+<h3>도덕</h3>
+<div class="meta">2학년 · 수행평가 4개</div>
+<a class="pdf" href="2학년/도덕/2026-2학기-도덕-교수학습및평가계획.pdf">과목 원문 PDF</a>
+<a class="item" href="2학년/도덕/01-성의-도덕적-의미-논술하기.html"><div>성의 도덕적 의미 논술하기</div><span>30점</span></a><a class="item" href="2학년/도덕/02-정의로운-사회의-모습-논술하기.html"><div>정의로운 사회의 모습 논술하기</div><span>30점</span></a><a class="item" href="2학년/도덕/03-국가와-시민의-바람직한-관계-구술하기.html"><div>국가와 시민의 바람직한 관계 구술하기</div><span>20점</span></a><a class="item" href="2학년/도덕/04-가치탐구활동.html"><div>가치탐구활동</div><span>20점</span></a>
+</article><article class="subj" data-grade="2학년" data-text="2학년 역사 신항로 개척과 세계의 변화 논술하기 시민 혁명 보고서 작성하기">
+<h3>역사</h3>
+<div class="meta">2학년 · 수행평가 2개</div>
+<a class="pdf" href="2학년/역사/2026-2학기-역사-교수학습및평가계획.pdf">과목 원문 PDF</a>
+<a class="item" href="2학년/역사/01-신항로-개척과-세계의-변화-논술하기.html"><div>신항로 개척과 세계의 변화 논술하기</div><span>30점</span></a><a class="item" href="2학년/역사/02-시민-혁명-보고서-작성하기.html"><div>시민 혁명 보고서 작성하기</div><span>20점</span></a>
+</article><article class="subj" data-grade="2학년" data-text="2학년 수학 도형의 성질 수리논술 도형의 닮음 수리논술">
+<h3>수학</h3>
+<div class="meta">2학년 · 수행평가 2개</div>
+<a class="pdf" href="2학년/수학/2026-2학기-수학-교수학습및평가계획.pdf">과목 원문 PDF</a>
+<a class="item" href="2학년/수학/01-도형의-성질-수리논술.html"><div>도형의 성질 수리논술</div><span>15점</span></a><a class="item" href="2학년/수학/02-도형의-닮음-수리논술.html"><div>도형의 닮음 수리논술</div><span>15점</span></a>
+</article><article class="subj" data-grade="2학년" data-text="2학년 과학 저항, 전류, 전압 사이의 관계 탐구 보고서 쓰기 영양소 검출 보고서 쓰기">
+<h3>과학</h3>
+<div class="meta">2학년 · 수행평가 2개</div>
+<a class="pdf" href="2학년/과학/2026-2학기-과학-교수학습및평가계획.pdf">과목 원문 PDF</a>
+<a class="item" href="2학년/과학/01-저항,-전류,-전압-사이의-관계-탐구-보고서-쓰기.html"><div>저항, 전류, 전압 사이의 관계 탐구 보고서 쓰기</div><span>15점</span></a><a class="item" href="2학년/과학/02-영양소-검출-보고서-쓰기.html"><div>영양소 검출 보고서 쓰기</div><span>15점</span></a>
+</article><article class="subj" data-grade="2학년" data-text="2학년 기술·가정 개성과 배려를 고려한 의복 디자인 제안하기 로봇 제작하기 진로 설계 논술하기 진로 설계와 창의적 문제 해결 활동하기">
+<h3>기술·가정</h3>
+<div class="meta">2학년 · 수행평가 4개</div>
+<a class="pdf" href="2학년/기술·가정/2026-2학기-기술·가정-교수학습및평가계획.pdf">과목 원문 PDF</a>
+<a class="item" href="2학년/기술·가정/01-개성과-배려를-고려한-의복-디자인-제안하기.html"><div>개성과 배려를 고려한 의복 디자인 제안하기</div><span>20점</span></a><a class="item" href="2학년/기술·가정/02-로봇-제작하기.html"><div>로봇 제작하기</div><span>20점</span></a><a class="item" href="2학년/기술·가정/03-진로-설계-논술하기.html"><div>진로 설계 논술하기</div><span>30점</span></a><a class="item" href="2학년/기술·가정/04-진로-설계와-창의적-문제-해결-활동하기.html"><div>진로 설계와 창의적 문제 해결 활동하기</div><span>30점</span></a>
+</article><article class="subj" data-grade="2학년" data-text="2학년 음악 음악극의 이해와 비평 컵타 연주하기 다양한 장르의 음악 노래하기 고전, 낭만 시대 음악 감상하기">
+<h3>음악</h3>
+<div class="meta">2학년 · 수행평가 4개</div>
+<a class="pdf" href="2학년/음악/2026-2학기-음악-교수학습및평가계획.pdf">과목 원문 PDF</a>
+<a class="item" href="2학년/음악/01-음악극의-이해와-비평.html"><div>음악극의 이해와 비평</div><span>25점</span></a><a class="item" href="2학년/음악/02-컵타-연주하기.html"><div>컵타 연주하기</div><span>25점</span></a><a class="item" href="2학년/음악/03-다양한-장르의-음악-노래하기.html"><div>다양한 장르의 음악 노래하기</div><span>25점</span></a><a class="item" href="2학년/음악/04-고전,-낭만-시대-음악-감상하기.html"><div>고전, 낭만 시대 음악 감상하기</div><span>25점</span></a>
+</article><article class="subj" data-grade="2학년" data-text="2학년 미술 공공미술의 감상과 표현하기 표현의 자유에 대한 관점 논술하기 창의적 공간 구성하기 축소모형 집 만들기">
+<h3>미술</h3>
+<div class="meta">2학년 · 수행평가 4개</div>
+<a class="pdf" href="2학년/미술/2026-2학기-미술-교수학습및평가계획.pdf">과목 원문 PDF</a>
+<a class="item" href="2학년/미술/01-공공미술의-감상과-표현하기.html"><div>공공미술의 감상과 표현하기</div><span>30점</span></a><a class="item" href="2학년/미술/02-표현의-자유에-대한-관점-논술하기.html"><div>표현의 자유에 대한 관점 논술하기</div><span>30점</span></a><a class="item" href="2학년/미술/03-창의적-공간-구성하기.html"><div>창의적 공간 구성하기</div><span>10점</span></a><a class="item" href="2학년/미술/04-축소모형-집-만들기.html"><div>축소모형 집 만들기</div><span>30점</span></a>
+</article><article class="subj" data-grade="2학년" data-text="2학년 체육 추크볼 종합 기술 수행하기 십자 달리기 배구 오버토스하기 스포츠의 원리와 올바른 수행 탐구하기">
+<h3>체육</h3>
+<div class="meta">2학년 · 수행평가 4개</div>
+<a class="pdf" href="2학년/체육/2026-2학기-체육-교수학습및평가계획.pdf">과목 원문 PDF</a>
+<a class="item" href="2학년/체육/01-추크볼-종합-기술-수행하기.html"><div>추크볼 종합 기술 수행하기</div><span>25점</span></a><a class="item" href="2학년/체육/02-십자-달리기.html"><div>십자 달리기</div><span>25점</span></a><a class="item" href="2학년/체육/03-배구-오버토스하기.html"><div>배구 오버토스하기</div><span>25점</span></a><a class="item" href="2학년/체육/04-스포츠의-원리와-올바른-수행-탐구하기.html"><div>스포츠의 원리와 올바른 수행 탐구하기</div><span>25점</span></a>
+</article><article class="subj" data-grade="2학년" data-text="2학년 영어 구입한 제품을 소개하는 글쓰기 언어 형식 활용 학습 포트폴리오">
+<h3>영어</h3>
+<div class="meta">2학년 · 수행평가 2개</div>
+<a class="pdf" href="2학년/영어/2026-2학기-영어-교수학습및평가계획.pdf">과목 원문 PDF</a>
+<a class="item" href="2학년/영어/01-구입한-제품을-소개하는-글쓰기.html"><div>구입한 제품을 소개하는 글쓰기</div><span>20점</span></a><a class="item" href="2학년/영어/02-언어-형식-활용-학습-포트폴리오.html"><div>언어 형식 활용 학습 포트폴리오</div><span>10점</span></a>
+</article><article class="subj" data-grade="2학년" data-text="2학년 정보 블록 기반 프로그래밍 컴퓨팅 포트폴리오 it 신문기사 작성하기 디지털 문화 논술하기">
+<h3>정보</h3>
+<div class="meta">2학년 · 수행평가 4개</div>
+<a class="pdf" href="2학년/정보/2026-2학기-정보-교수학습및평가계획.pdf">과목 원문 PDF</a>
+<a class="item" href="2학년/정보/01-블록-기반-프로그래밍.html"><div>블록 기반 프로그래밍</div><span>30점</span></a><a class="item" href="2학년/정보/02-컴퓨팅-포트폴리오.html"><div>컴퓨팅 포트폴리오</div><span>20점</span></a><a class="item" href="2학년/정보/03-IT-신문기사-작성하기.html"><div>IT 신문기사 작성하기</div><span>25점</span></a><a class="item" href="2학년/정보/04-디지털-문화-논술하기.html"><div>디지털 문화 논술하기</div><span>25점</span></a>
+</article><article class="subj" data-grade="3학년" data-text="3학년 국어 문학작품 감상하여 논술하기 설득하는 글쓰기">
+<h3>국어</h3>
+<div class="meta">3학년 · 수행평가 2개</div>
+<a class="pdf" href="3학년/국어/2026-2학기-국어-교수학습및평가계획.pdf">과목 원문 PDF</a>
+<a class="item" href="3학년/국어/01-문학작품-감상하여-논술하기.html"><div>문학작품 감상하여 논술하기</div><span>15점</span></a><a class="item" href="3학년/국어/02-설득하는-글쓰기.html"><div>설득하는 글쓰기</div><span>15점</span></a>
+</article><article class="subj" data-grade="3학년" data-text="3학년 사회 지리적 문제에 관한 글쓰기 도시화, 영역 갈등, 기후 변화에 관한 포트폴리오">
+<h3>사회</h3>
+<div class="meta">3학년 · 수행평가 2개</div>
+<a class="pdf" href="3학년/사회/2026-2학기-사회-교수학습및평가계획.pdf">과목 원문 PDF</a>
+<a class="item" href="3학년/사회/01-지리적-문제에-관한-글쓰기.html"><div>지리적 문제에 관한 글쓰기</div><span>30점</span></a><a class="item" href="3학년/사회/02-도시화,-영역-갈등,-기후-변화에-관한-포트폴리오.html"><div>도시화, 영역 갈등, 기후 변화에 관한 포트폴리오</div><span>30점</span></a>
+</article><article class="subj" data-grade="3학년" data-text="3학년 역사 나의 역사 타임라인 만들기 독립운동가 탐구 보고서 작성하기">
+<h3>역사</h3>
+<div class="meta">3학년 · 수행평가 2개</div>
+<a class="pdf" href="3학년/역사/2026-2학기-역사-교수학습및평가계획.pdf">과목 원문 PDF</a>
+<a class="item" href="3학년/역사/01-나의-역사-타임라인-만들기.html"><div>나의 역사 타임라인 만들기</div><span>20점</span></a><a class="item" href="3학년/역사/02-독립운동가-탐구-보고서-작성하기.html"><div>독립운동가 탐구 보고서 작성하기</div><span>30점</span></a>
+</article><article class="subj" data-grade="3학년" data-text="3학년 수학 원의 성질 수리논술 도형과 통계 탐구 과정 포트폴리오">
+<h3>수학</h3>
+<div class="meta">3학년 · 수행평가 2개</div>
+<a class="pdf" href="3학년/수학/2026-2학기-수학-교수학습및평가계획.pdf">과목 원문 PDF</a>
+<a class="item" href="3학년/수학/01-원의-성질-수리논술.html"><div>원의 성질 수리논술</div><span>20점</span></a><a class="item" href="3학년/수학/02-도형과-통계-탐구-과정-포트폴리오.html"><div>도형과 통계 탐구 과정 포트폴리오</div><span>10점</span></a>
+</article><article class="subj" data-grade="3학년" data-text="3학년 과학 감수 분열과 체세포 분열 비교하기 별까지의 거리와 온도 논술하기">
+<h3>과학</h3>
+<div class="meta">3학년 · 수행평가 2개</div>
+<a class="pdf" href="3학년/과학/2026-2학기-과학-교수학습및평가계획.pdf">과목 원문 PDF</a>
+<a class="item" href="3학년/과학/01-감수-분열과-체세포-분열-비교하기.html"><div>감수 분열과 체세포 분열 비교하기</div><span>20점</span></a><a class="item" href="3학년/과학/02-별까지의-거리와-온도-논술하기.html"><div>별까지의 거리와 온도 논술하기</div><span>20점</span></a>
+</article><article class="subj" data-grade="3학년" data-text="3학년 기술·가정 실천적 문제 중심 배움일기 작성하기 나의 생애 설계하기 가족책 만들기 일상 속 생명 기술을 논술하기">
+<h3>기술·가정</h3>
+<div class="meta">3학년 · 수행평가 4개</div>
+<a class="pdf" href="3학년/기술·가정/2026-2학기-기술·가정-교수학습및평가계획.pdf">과목 원문 PDF</a>
+<a class="item" href="3학년/기술·가정/01-실천적-문제-중심-배움일기-작성하기.html"><div>실천적 문제 중심 배움일기 작성하기</div><span>20점</span></a><a class="item" href="3학년/기술·가정/02-나의-생애-설계하기.html"><div>나의 생애 설계하기</div><span>30점</span></a><a class="item" href="3학년/기술·가정/03-가족책-만들기.html"><div>가족책 만들기</div><span>20점</span></a><a class="item" href="3학년/기술·가정/04-일상-속-생명-기술을-논술하기.html"><div>일상 속 생명 기술을 논술하기</div><span>30점</span></a>
+</article><article class="subj" data-grade="3학년" data-text="3학년 음악 자율 선택곡 노래하기 상황에 맞는 곡 선정하여 논술하기 우쿨렐레 코드 연주하기 우쿨렐레 가락 연주하기">
+<h3>음악</h3>
+<div class="meta">3학년 · 수행평가 4개</div>
+<a class="pdf" href="3학년/음악/2026-2학기-음악-교수학습및평가계획.pdf">과목 원문 PDF</a>
+<a class="item" href="3학년/음악/01-자율-선택곡-노래하기.html"><div>자율 선택곡 노래하기</div><span>25점</span></a><a class="item" href="3학년/음악/02-상황에-맞는-곡-선정하여-논술하기.html"><div>상황에 맞는 곡 선정하여 논술하기</div><span>25점</span></a><a class="item" href="3학년/음악/03-우쿨렐레-코드-연주하기.html"><div>우쿨렐레 코드 연주하기</div><span>25점</span></a><a class="item" href="3학년/음악/04-우쿨렐레-가락-연주하기.html"><div>우쿨렐레 가락 연주하기</div><span>25점</span></a>
+</article><article class="subj" data-grade="3학년" data-text="3학년 체육 양궁과 플로어볼 이해하기 양궁 표적 맞히기 양궁 화살 멀리 쏘기 플로어볼 기본기능 수행하기 플로어볼 경기하기">
+<h3>체육</h3>
+<div class="meta">3학년 · 수행평가 5개</div>
+<a class="pdf" href="3학년/체육/2026-2학기-체육-교수학습및평가계획.pdf">과목 원문 PDF</a>
+<a class="item" href="3학년/체육/01-양궁과-플로어볼-이해하기.html"><div>양궁과 플로어볼 이해하기</div><span>20점</span></a><a class="item" href="3학년/체육/02-양궁-표적-맞히기.html"><div>양궁 표적 맞히기</div><span>20점</span></a><a class="item" href="3학년/체육/03-양궁-화살-멀리-쏘기.html"><div>양궁 화살 멀리 쏘기</div><span>20점</span></a><a class="item" href="3학년/체육/04-플로어볼-기본기능-수행하기.html"><div>플로어볼 기본기능 수행하기</div><span>20점</span></a><a class="item" href="3학년/체육/05-플로어볼-경기하기.html"><div>플로어볼 경기하기</div><span>20점</span></a>
+</article><article class="subj" data-grade="3학년" data-text="3학년 영어 나의 롤모델 소개하기 언어 형식 활용 학습 포트폴리오">
+<h3>영어</h3>
+<div class="meta">3학년 · 수행평가 2개</div>
+<a class="pdf" href="3학년/영어/2026-2학기-영어-교수학습및평가계획.pdf">과목 원문 PDF</a>
+<a class="item" href="3학년/영어/01-나의-롤모델-소개하기.html"><div>나의 롤모델 소개하기</div><span>20점</span></a><a class="item" href="3학년/영어/02-언어-형식-활용-학습-포트폴리오.html"><div>언어 형식 활용 학습 포트폴리오</div><span>10점</span></a>
+</article><article class="subj" data-grade="3학년" data-text="3학년 생활중국어 중국의 명절 소개하는 글쓰기 자기소개 글쓰기 중국어 발음하기 중국어 쓰기">
+<h3>생활중국어</h3>
+<div class="meta">3학년 · 수행평가 4개</div>
+<a class="pdf" href="3학년/생활중국어/2026-2학기-생활중국어-교수학습및평가계획.pdf">과목 원문 PDF</a>
+<a class="item" href="3학년/생활중국어/01-중국의-명절-소개하는-글쓰기.html"><div>중국의 명절 소개하는 글쓰기</div><span>30점</span></a><a class="item" href="3학년/생활중국어/02-자기소개-글쓰기.html"><div>자기소개 글쓰기</div><span>30점</span></a><a class="item" href="3학년/생활중국어/03-중국어-발음하기.html"><div>중국어 발음하기</div><span>20점</span></a><a class="item" href="3학년/생활중국어/04-중국어-쓰기.html"><div>중국어 쓰기</div><span>20점</span></a>
+</article></div>
+  <p class="note">출처는 학교알리미 2026년 9월 공시입니다. 소현중학교 공식 홈페이지가 아닙니다.</p>
+</div>
+<script>
+const q = document.getElementById('q');
+const cards = [...document.querySelectorAll('.subj')];
+let grade = 'all';
+function apply() {
+  const query = q.value.trim().toLowerCase();
+  cards.forEach(card => {
+    const okG = grade === 'all' || card.dataset.grade === grade;
+    const okQ = !query || card.dataset.text.includes(query);
+    card.style.display = okG && okQ ? '' : 'none';
+  });
+}
+q.addEventListener('input', apply);
+document.getElementById('grades').addEventListener('click', (e) => {
+  const btn = e.target.closest('button');
+  if (!btn) return;
+  grade = btn.dataset.grade;
+  document.querySelectorAll('#grades button').forEach(b => b.classList.toggle('on', b === btn));
+  apply();
+});
+</script>
+</body>
+</html>

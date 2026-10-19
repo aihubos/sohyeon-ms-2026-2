@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1학년 국어 · 비평문 쓰기</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root {
+  --bg: #f2f4f6;
+  --card: #ffffff;
+  --ink: #191f28;
+  --text: #333d4b;
+  --muted: #6b7684;
+  --faint: #8b95a1;
+  --line: #e5e8eb;
+  --blue: #3182f6;
+  --blue-ink: #1b64da;
+  --blue-bg: #e8f3ff;
+  --red: #f04452;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  line-height: 1.55;
+}
+a { color: inherit; text-decoration: none; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 28px 20px 80px; }
+.top {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 22px; color: var(--muted); font-size: 13px; font-weight: 600;
+}
+.top a:hover { color: var(--blue-ink); }
+h1 {
+  margin: 8px 0 0;
+  font-size: 32px; line-height: 1.25; font-weight: 700; letter-spacing: -0.04em;
+}
+.kicker { color: var(--faint); font-size: 13px; font-weight: 600; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 28px; }
+.chip {
+  display: inline-flex; align-items: center; height: 32px; padding: 0 12px;
+  border-radius: 999px; background: #fff; color: var(--text); font-size: 13px; font-weight: 600;
+}
+.chip.blue { background: var(--blue-bg); color: var(--blue-ink); }
+.card {
+  background: var(--card); border-radius: 24px; padding: 22px 22px 8px; margin: 0 0 14px;
+}
+.card h2 {
+  margin: 0 0 14px; font-size: 13px; font-weight: 700; color: var(--faint);
+}
+.task { margin: 0 0 14px; font-size: 16px; color: var(--text); }
+.task b { color: var(--blue); font-weight: 700; margin-right: 6px; }
+.methods { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.method {
+  height: 34px; display: inline-flex; align-items: center; padding: 0 12px;
+  border-radius: 12px; background: var(--bg); color: var(--faint); font-size: 14px; font-weight: 600;
+}
+.method.on { background: var(--blue); color: #fff; }
+.element { padding: 6px 0 18px; border-top: 1px solid var(--line); }
+.element:first-of-type { border-top: 0; }
+.el-head { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; margin: 8px 0 4px; }
+.el-head strong { font-size: 17px; letter-spacing: -0.03em; }
+.el-head span { color: var(--blue-ink); font-weight: 700; font-variant-numeric: tabular-nums; }
+.row {
+  display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: start;
+  padding: 12px 0; border-top: 1px solid #f2f4f6;
+}
+.row p { margin: 0; color: var(--text); font-size: 15px; }
+.score {
+  min-width: 42px; height: 32px; padding: 0 10px; border-radius: 10px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--bg); color: var(--text); font-weight: 700; font-variant-numeric: tabular-nums;
+}
+.score.max { background: var(--blue); color: #fff; }
+.footer-row { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+.std { padding: 14px 0; border-top: 1px solid var(--line); }
+.std .code { color: var(--blue-ink); font-weight: 700; font-size: 13px; }
+.std .desc { margin: 4px 0 10px; color: var(--text); }
+.lv { display: grid; grid-template-columns: 28px 1fr; gap: 10px; padding: 7px 0; }
+.badge {
+  width: 28px; height: 28px; border-radius: 9px; display: flex; align-items: center; justify-content: center;
+  background: var(--bg); font-weight: 700; font-size: 13px; color: var(--text);
+}
+.badge.A { background: var(--blue); color: #fff; }
+.note { color: var(--faint); font-size: 12px; margin-top: 22px; line-height: 1.6; }
+.nav { display: flex; justify-content: space-between; gap: 12px; margin-top: 18px; font-size: 14px; font-weight: 600; }
+.nav a { color: var(--blue-ink); }
+.index-wrap { max-width: 1080px; margin: 0 auto; padding: 36px 24px 80px; }
+.index-wrap h1 { font-size: 40px; margin: 6px 0 8px; }
+.lead { color: var(--muted); font-size: 16px; margin: 0 0 22px; }
+.search {
+  width: 100%; height: 52px; border: 0; border-radius: 16px; padding: 0 18px;
+  font: inherit; font-size: 16px; background: #fff; color: var(--ink); outline: none;
+}
+.grades { display: flex; gap: 8px; margin: 16px 0 22px; }
+.grades button {
+  height: 38px; padding: 0 14px; border: 0; border-radius: 999px; background: #fff;
+  font: inherit; font-weight: 700; color: var(--muted); cursor: pointer;
+}
+.grades button.on { background: var(--ink); color: #fff; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+.subj {
+  background: #fff; border-radius: 22px; padding: 18px 18px 8px;
+}
+.subj h3 { margin: 0 0 4px; font-size: 20px; letter-spacing: -0.03em; }
+.subj .meta { color: var(--faint); font-size: 13px; font-weight: 600; margin-bottom: 10px; }
+.item { display: flex; justify-content: space-between; gap: 10px; padding: 11px 0; border-top: 1px solid #f2f4f6; }
+.item span { color: var(--blue-ink); font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.pdf { display: inline-flex; margin: 8px 0 12px; color: var(--blue-ink); font-size: 13px; font-weight: 700; }
+@media (max-width: 640px) {
+  h1 { font-size: 26px; }
+  .index-wrap h1 { font-size: 30px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a href="../../index.html">소현중학교</a><span>2026학년도 2학기</span></div>
+  <div class="kicker">수행평가 평가 기준</div>
+  <h1>비평문 쓰기</h1>
+  <div class="chips"><span class="chip blue">1학년 국어</span><span class="chip blue">만점 20점</span><span class="chip">2학기</span><span class="chip">논술</span><span class="chip">교사 관찰 및 기록</span></div>
+  <section class="card"><h2>수행 과제</h2><p class="task"><b>01</b>영화를 보고 전체 줄거리를 정확하게 파악하며 명확하고 논리적인 기준으로 글쓰기</p></section>
+  <section class="card"><h2>평가 방법</h2><div class="methods"><span class="method on">논술</span><span class="method">구술 발표</span><span class="method">토의토론</span><span class="method">프로젝트</span><span class="method">실험실습</span><span class="method">포트폴리오</span><span class="method">기타</span><span class="method on">교사 관찰 및 기록</span><span class="method">자기평가</span><span class="method">동료평가</span></div></section>
+  <section class="card"><h2>채점 기준</h2><div class="element"><div class="el-head"><strong>영화의 내용 정리하기  핵심</strong><span>5점</span></div><div class="row"><p>영화의 핵심 내용과 주제를 정확히 선별하여 정리하고, 도입-전개-결말이 뚜렷 하고 전개가 매우 논리적임.</p><span class="score max">5</span></div><div class="row"><p>중요 내용을 대부분 포함하였으나 일부 불필요하거나 부족한 내용이 있고 일부 구조나 연결이 어색함.</p><span class="score">4</span></div><div class="row"><p>핵심 내용보다 세부 묘사 주변 내용이 많고, 이야기 전개 순서가 뒤섞이거나 이해하지 못함.</p><span class="score">3</span></div><div class="row"><p>내용이 거의 드러나지 않거나 이야기 구조가 없고 무작위로 나열되어 있음.</p><span class="score">2</span></div><div class="row"><p>영화의 내용을 정리하지 않아, 내용 파악이 어려움이 있음.</p><span class="score">1</span></div></div><div class="element"><div class="el-head"><strong>주장 명확하게 쓰기</strong><span>6점</span></div><div class="row"><p>영화에 관한 주장이 분명하며, 비평 관점이 일관되고 설득력 있음.</p><span class="score max">6</span></div><div class="row"><p>주장이 드러나며, 전체적으로 관점을 유지하려는 시도가 있음.</p><span class="score">5</span></div><div class="row"><p>주장이나 관점이 모호하거나 일관되지 못함.</p><span class="score">4</span></div><div class="row"><p>주장과 관점이 드러나지 않거나, 주제가 뚜렷하지 않음.</p><span class="score">3</span></div></div><div class="element"><div class="el-head"><strong>근거 타당하게 마련하기  글의</strong><span>6점</span></div><div class="row"><p>구체적인 장면, 대사, 표현 등을 활용하여 설득력 있는 근거를 제시하고 있음.</p><span class="score max">6</span></div><div class="row"><p>예시나 장면 언급은 있으나 설득력이 약하거나 연결이 다소 어색함.</p><span class="score">5</span></div><div class="row"><p>근거가 부적절하거나 주장과의 연결이 부족함.</p><span class="score">4</span></div><div class="row"><p>근거가 없거나, 주장과 관련 없는 내용을 제시함.</p><span class="score">3</span></div></div><div class="element"><div class="el-head"><strong>스럽게 글의 구조와 언어 규칙을 고려한 글쓰기</strong><span>3점</span></div><div class="row"><p>구조(처음-중간-끝 및 문단 구분)나 전개 방식(시간 순서나 인과 관계)을 글을 작성하고 맞춤법, 띄어쓰기, 문장 부호, 문장 호응을 잘 지켜 사용함.</p><span class="score max">3</span></div><div class="row"><p>글의 구조(처음-중간-끝 및 문단 구분)나 전개 방식(시간 순서나 인과 관계)이 전반적으로 자연스럽지만 일부 어색하고 맞춤법, 띄어쓰기, 문장 부호, 문장 응을 일부 오류는 있으나 이해에는 큰 무리는 없이 사용함.</p><span class="score">2</span></div><div class="row"><p>글의 구조(처음-중간-끝 및 문단 구분)나 전개 방식(시간 순서나 인과 관계)이 잘 지켜지지 않고, 맞춤법, 띄어쓰기, 문장 부호, 문장 호응 등 문법 오류가 아 전달에 어려움이 있음.</p><span class="score">1</span></div></div></section>
+  <section class="card"><h2>기본 점수와 미참여</h2><div class="footer-row"><span>기본점수</span><b>8점</b></div><div class="footer-row"><span>자발적 미참여자, 백지활동지 제출자</span><b>7점</b></div><div class="footer-row"><span>의한 수행평가 미참여자(장기미인정결석 등)</span><b>6점</b></div></section>
+  <section class="card"><h2>성취기준별 성취수준</h2><div class="std"><div class="code">[9국03-03]주장을</div><div class="desc">뒷받침할 수 있는타당한 근거를 들고적절한 표현을사용하여 주장하는글을 쓴다.</div><div class="lv"><div class="badge A">A</div><div>주장을 뒷받침할 수 있는 타당하고 다양한 근거를 들고 적절하고 효과적인 표현을 사용하여 자신의 주장을 설득력 있게 제시하는 주장하는 글을 쓸 수 있다.</div></div><div class="lv"><div class="badge B">B</div><div>주장을 뒷받침할 수 있는 타당한 근거를 들고 적절한 표현을 사용하여 자신의주장을 설득력 있게 제시하는 주장하는 글을 쓸 수 있다.</div></div><div class="lv"><div class="badge C">C</div><div>주장을 뒷받침할 수 있는 타당한 근거를 들고 적절한 표현을 사용하여 자신의주장을 제시하는 글을 쓸 수 있다.</div></div><div class="lv"><div class="badge D">D</div><div>주장을 뒷받침할 수 있는 근거를 들고 적절한 표현을 부분적으로 사용하여주장하는 글을 쓸 수 있다.</div></div><div class="lv"><div class="badge E">E</div><div>주장을 뒷받침할 수 있는 근거를 제한적으로 들어 주장하는 글을 쓴다.</div></div></div></section>
+  <p class="note">출처: 학교알리미 2026년 9월 공시(3차), 소현중학교 교과별 교수·학습 및 평가 계획. 원문 13쪽.<br><a href="2026-2학기-국어-교수학습및평가계획.pdf">과목 원문 PDF 열기</a></p>
+  <div class="nav"><a href="02-품사와-어휘-분석하기.html">이전 · 품사와 어휘 분석하기</a><span></span></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2학년 미술 · 공공미술의 감상과 표현하기</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root {
+  --bg: #f2f4f6;
+  --card: #ffffff;
+  --ink: #191f28;
+  --text: #333d4b;
+  --muted: #6b7684;
+  --faint: #8b95a1;
+  --line: #e5e8eb;
+  --blue: #3182f6;
+  --blue-ink: #1b64da;
+  --blue-bg: #e8f3ff;
+  --red: #f04452;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  line-height: 1.55;
+}
+a { color: inherit; text-decoration: none; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 28px 20px 80px; }
+.top {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 22px; color: var(--muted); font-size: 13px; font-weight: 600;
+}
+.top a:hover { color: var(--blue-ink); }
+h1 {
+  margin: 8px 0 0;
+  font-size: 32px; line-height: 1.25; font-weight: 700; letter-spacing: -0.04em;
+}
+.kicker { color: var(--faint); font-size: 13px; font-weight: 600; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 28px; }
+.chip {
+  display: inline-flex; align-items: center; height: 32px; padding: 0 12px;
+  border-radius: 999px; background: #fff; color: var(--text); font-size: 13px; font-weight: 600;
+}
+.chip.blue { background: var(--blue-bg); color: var(--blue-ink); }
+.card {
+  background: var(--card); border-radius: 24px; padding: 22px 22px 8px; margin: 0 0 14px;
+}
+.card h2 {
+  margin: 0 0 14px; font-size: 13px; font-weight: 700; color: var(--faint);
+}
+.task { margin: 0 0 14px; font-size: 16px; color: var(--text); }
+.task b { color: var(--blue); font-weight: 700; margin-right: 6px; }
+.methods { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.method {
+  height: 34px; display: inline-flex; align-items: center; padding: 0 12px;
+  border-radius: 12px; background: var(--bg); color: var(--faint); font-size: 14px; font-weight: 600;
+}
+.method.on { background: var(--blue); color: #fff; }
+.element { padding: 6px 0 18px; border-top: 1px solid var(--line); }
+.element:first-of-type { border-top: 0; }
+.el-head { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; margin: 8px 0 4px; }
+.el-head strong { font-size: 17px; letter-spacing: -0.03em; }
+.el-head span { color: var(--blue-ink); font-weight: 700; font-variant-numeric: tabular-nums; }
+.row {
+  display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: start;
+  padding: 12px 0; border-top: 1px solid #f2f4f6;
+}
+.row p { margin: 0; color: var(--text); font-size: 15px; }
+.score {
+  min-width: 42px; height: 32px; padding: 0 10px; border-radius: 10px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--bg); color: var(--text); font-weight: 700; font-variant-numeric: tabular-nums;
+}
+.score.max { background: var(--blue); color: #fff; }
+.footer-row { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+.std { padding: 14px 0; border-top: 1px solid var(--line); }
+.std .code { color: var(--blue-ink); font-weight: 700; font-size: 13px; }
+.std .desc { margin: 4px 0 10px; color: var(--text); }
+.lv { display: grid; grid-template-columns: 28px 1fr; gap: 10px; padding: 7px 0; }
+.badge {
+  width: 28px; height: 28px; border-radius: 9px; display: flex; align-items: center; justify-content: center;
+  background: var(--bg); font-weight: 700; font-size: 13px; color: var(--text);
+}
+.badge.A { background: var(--blue); color: #fff; }
+.note { color: var(--faint); font-size: 12px; margin-top: 22px; line-height: 1.6; }
+.nav { display: flex; justify-content: space-between; gap: 12px; margin-top: 18px; font-size: 14px; font-weight: 600; }
+.nav a { color: var(--blue-ink); }
+.index-wrap { max-width: 1080px; margin: 0 auto; padding: 36px 24px 80px; }
+.index-wrap h1 { font-size: 40px; margin: 6px 0 8px; }
+.lead { color: var(--muted); font-size: 16px; margin: 0 0 22px; }
+.search {
+  width: 100%; height: 52px; border: 0; border-radius: 16px; padding: 0 18px;
+  font: inherit; font-size: 16px; background: #fff; color: var(--ink); outline: none;
+}
+.grades { display: flex; gap: 8px; margin: 16px 0 22px; }
+.grades button {
+  height: 38px; padding: 0 14px; border: 0; border-radius: 999px; background: #fff;
+  font: inherit; font-weight: 700; color: var(--muted); cursor: pointer;
+}
+.grades button.on { background: var(--ink); color: #fff; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+.subj {
+  background: #fff; border-radius: 22px; padding: 18px 18px 8px;
+}
+.subj h3 { margin: 0 0 4px; font-size: 20px; letter-spacing: -0.03em; }
+.subj .meta { color: var(--faint); font-size: 13px; font-weight: 600; margin-bottom: 10px; }
+.item { display: flex; justify-content: space-between; gap: 10px; padding: 11px 0; border-top: 1px solid #f2f4f6; }
+.item span { color: var(--blue-ink); font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.pdf { display: inline-flex; margin: 8px 0 12px; color: var(--blue-ink); font-size: 13px; font-weight: 700; }
+@media (max-width: 640px) {
+  h1 { font-size: 26px; }
+  .index-wrap h1 { font-size: 30px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a href="../../index.html">소현중학교</a><span>2026학년도 2학기</span></div>
+  <div class="kicker">수행평가 평가 기준</div>
+  <h1>공공미술의 감상과 표현하기</h1>
+  <div class="chips"><span class="chip blue">2학년 미술</span><span class="chip blue">만점 30점</span><span class="chip">2학기</span><span class="chip">프로젝트</span><span class="chip">실험실습</span><span class="chip">교사 관찰 및 기록</span><span class="chip">동료평가</span></div>
+  <section class="card"><h2>수행 과제</h2><p class="task"><b>01</b>공공미술의 목적과 역할을 이해하고, 설치 장소와 대상의 특성을 고려하여 작품의 주제와 표현 방법 계획하기</p><p class="task"><b>02</b>인체 비율과 동세, 색채 표현 등을 고려하여 주제를 효과적으로 표현하기</p><p class="task"><b>03</b>완성한 작품을 전시하고, 작품 설명을 통해 제작 의도와 공공미술의 의미 전달하기</p></section>
+  <section class="card"><h2>평가 방법</h2><div class="methods"><span class="method">논술</span><span class="method">구술 발표</span><span class="method">토의토론</span><span class="method on">프로젝트</span><span class="method on">실험실습</span><span class="method">포트폴리오</span><span class="method">기타</span><span class="method on">교사 관찰 및 기록</span><span class="method">자기평가</span><span class="method on">동료평가</span></div></section>
+  <section class="card"><h2>채점 기준</h2><div class="element"><div class="el-head"><strong>공공미술에 적합한 주제 선정하기</strong><span>5점</span></div><div class="row"><p>그림이 그려질 장소와 주요 관람자를 충분히 고려하여 창의적인 주제를 선정함.</p><span class="score max">5</span></div><div class="row"><p>그림이 그려질 장소와 주요 관람자를 고려하여 이에 적절한 주제를 선정함.</p><span class="score">4</span></div><div class="row"><p>그림이 그려질 장소와 주요 관람자를 고려하여 주제를 선정함.</p><span class="score">3</span></div><div class="row"><p>공공미술에 대한 이해가 미흡하여 주제 선정에 어려움이 있음.</p><span class="score">2</span></div></div><div class="element"><div class="el-head"><strong>계획서 작성하기</strong><span>5점</span></div><div class="row"><p>계획서의 모든 항목을 충실하게 작성하였으며, 작품의 주제, 구성, 표현 방법을 구체적이고 체계적으로 제시함.</p><span class="score max">5</span></div><div class="row"><p>계획서의 대부분의 항목을 작성하였으며, 작품의 주제, 구성, 표현 방법을 비교적 구체적으로 제시함.</p><span class="score">4</span></div><div class="row"><p>계획서를 작성하였으나 일부 항목이 누락 되었거나 작품의 주제, 구성, 표현 방법의 내용 이 다소 미흡함.</p><span class="score">3</span></div><div class="row"><p>계획서를 작성하지 않았거나 대부분의 항목이 누락되어 내용이 매우 미흡함.</p><span class="score">2</span></div></div><div class="element"><div class="el-head"><strong>인체 비율을 반영하여 표현하기</strong><span>10점</span></div><div class="row"><p>인체 비율이 적절하며, 걷는 동세가 자연스럽고 안정적으로 표현되어 인물의 움직임이 잘 드러남.</p><span class="score max">10</span></div><div class="row"><p>인체 비율이 대체로 적절하며, 걷는 동세가 비교적 자연스럽게 표현되어 움직임이 드러남.</p><span class="score">8</span></div><div class="row"><p>인체 비율이나 걷는 동세의 표현이 다소 미흡하여 움직임이 부분적으로만 드러남.</p><span class="score">6</span></div><div class="row"><p>인체 비율과 걷는 동세의 표현이 부족하여 인물의 움직임을 파악하기 어려움.</p><span class="score">4</span></div><div class="row"><p>작품의 주제와 조화를 이루는 색채를 적절하게 활용하여 전달하고자 하는 내용을 효과적으로 표현함.</p><span class="score max">10</span></div><div class="row"><p>작품의 주제에 어울리는 색채를 활용하여 전달하고자 하는 내용을 적절하게 표현함.</p><span class="score">8</span></div><div class="row"><p>색채를 활용하여 표현하였으나 주제와의 조화나 전달력이 다소 부족함.</p><span class="score">6</span></div><div class="row"><p>색채 활용이 미흡하여 작품의 주제나 전달하고자 하는 내용이 잘 드러나지 않음.</p><span class="score">4</span></div></div></section>
+  <section class="card"><h2>기본 점수와 미참여</h2><div class="footer-row"><span>기본점수</span><b>12점</b></div><div class="footer-row"><span>자발적 미참여자, 백지활동지 제출자</span><b>11점</b></div><div class="footer-row"><span>의한 수행평가 미참여자(장기미인정결석 등)</span><b>10점</b></div></section>
+  <section class="card"><h2>성취기준별 성취수준</h2><div class="std"><div class="code">[9미01-01]</div><div class="desc">감각을 활용하여 대상과 현상을 탐색하고자신과 환경에 대한 감수성</div><div class="lv"><div class="badge A">A</div><div>다양한 감각을 활용하여 대상과 현상을 탐색하고, 미적 인식을 통해 자신과 환경에 대한 감수성을확장할 수 있다.</div></div><div class="lv"><div class="badge B">B</div><div>감각을 활용하여 대상과 현상을 탐색하고 자신과 환경에 대한 감수성을 확장할 수 있다.</div></div><div class="lv"><div class="badge C">C</div><div>감각을 활용하여 대상과 현상을 일부 탐색하고 자신과 환경에 대한 감수성을 확장하기 위해노력한다.</div></div></div><div class="std"><div class="code">[9미02-01]</div><div class="desc">을 확장할 수 있다.주제를 탐구하고 의도를 반영하여 적합한계획을 할 수 있다.</div><div class="lv"><div class="badge A">A</div><div>주제를 적극적으로 탐구하고 의도를 구체적으로 반영하여 적합한 표현을 계획할 수 있다.</div></div><div class="lv"><div class="badge B">B</div><div>주제를 탐구하고 의도를 반영하여 적합한 표현을 계획할 수 있다.</div></div><div class="lv"><div class="badge C">C</div><div>주제를 제한적으로 탐구하고 의도를 일부 반영하여 표현을 계획할 수 있다.</div></div></div><div class="std"><div class="code">[9미02-03]</div><div class="desc">조형 요소와 원리, 표현 재료와 방법, 디지털 매체를 포함한 다양한 매체를 활용하여 주제를 효과적으로 표현할 수 있다.</div><div class="lv"><div class="badge A">A</div><div>조형 요소와 원리, 표현 재료와 방법, 디지털 매체를 포함한 다양한 매체의 특성을 이해하고설명할 수 있으며 이를 종합적으로 활용하여 주제를 효과적으로 표현할 수 있다.</div></div><div class="lv"><div class="badge B">B</div><div>조형 요소와 원리, 표현 재료와 방법, 디지털 매체를 포함한 다양한 매체의 특성을 이해하고이를 활용하여 주제를 효과적으로 표현할 수 있다.</div></div><div class="lv"><div class="badge C">C</div><div>조형 요소와 원리, 표현 재료와 방법, 디지털 매체를 포함한 다양한 매체의 특성을 알고 이를활용하여 주제 표현을 시도할 수 있다.</div></div></div></section>
+  <p class="note">출처: 학교알리미 2026년 9월 공시(3차), 소현중학교 교과별 교수·학습 및 평가 계획. 원문 121쪽.<br><a href="2026-2학기-미술-교수학습및평가계획.pdf">과목 원문 PDF 열기</a></p>
+  <div class="nav"><span></span><a href="02-표현의-자유에-대한-관점-논술하기.html">표현의 자유에 대한 관점 논술하기 · 다음</a></div>
+</div>
+</body>
+</html>

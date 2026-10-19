@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2학년 음악 · 컵타 연주하기</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root {
+  --bg: #f2f4f6;
+  --card: #ffffff;
+  --ink: #191f28;
+  --text: #333d4b;
+  --muted: #6b7684;
+  --faint: #8b95a1;
+  --line: #e5e8eb;
+  --blue: #3182f6;
+  --blue-ink: #1b64da;
+  --blue-bg: #e8f3ff;
+  --red: #f04452;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  line-height: 1.55;
+}
+a { color: inherit; text-decoration: none; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 28px 20px 80px; }
+.top {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 22px; color: var(--muted); font-size: 13px; font-weight: 600;
+}
+.top a:hover { color: var(--blue-ink); }
+h1 {
+  margin: 8px 0 0;
+  font-size: 32px; line-height: 1.25; font-weight: 700; letter-spacing: -0.04em;
+}
+.kicker { color: var(--faint); font-size: 13px; font-weight: 600; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 28px; }
+.chip {
+  display: inline-flex; align-items: center; height: 32px; padding: 0 12px;
+  border-radius: 999px; background: #fff; color: var(--text); font-size: 13px; font-weight: 600;
+}
+.chip.blue { background: var(--blue-bg); color: var(--blue-ink); }
+.card {
+  background: var(--card); border-radius: 24px; padding: 22px 22px 8px; margin: 0 0 14px;
+}
+.card h2 {
+  margin: 0 0 14px; font-size: 13px; font-weight: 700; color: var(--faint);
+}
+.task { margin: 0 0 14px; font-size: 16px; color: var(--text); }
+.task b { color: var(--blue); font-weight: 700; margin-right: 6px; }
+.methods { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.method {
+  height: 34px; display: inline-flex; align-items: center; padding: 0 12px;
+  border-radius: 12px; background: var(--bg); color: var(--faint); font-size: 14px; font-weight: 600;
+}
+.method.on { background: var(--blue); color: #fff; }
+.element { padding: 6px 0 18px; border-top: 1px solid var(--line); }
+.element:first-of-type { border-top: 0; }
+.el-head { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; margin: 8px 0 4px; }
+.el-head strong { font-size: 17px; letter-spacing: -0.03em; }
+.el-head span { color: var(--blue-ink); font-weight: 700; font-variant-numeric: tabular-nums; }
+.row {
+  display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: start;
+  padding: 12px 0; border-top: 1px solid #f2f4f6;
+}
+.row p { margin: 0; color: var(--text); font-size: 15px; }
+.score {
+  min-width: 42px; height: 32px; padding: 0 10px; border-radius: 10px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--bg); color: var(--text); font-weight: 700; font-variant-numeric: tabular-nums;
+}
+.score.max { background: var(--blue); color: #fff; }
+.footer-row { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+.std { padding: 14px 0; border-top: 1px solid var(--line); }
+.std .code { color: var(--blue-ink); font-weight: 700; font-size: 13px; }
+.std .desc { margin: 4px 0 10px; color: var(--text); }
+.lv { display: grid; grid-template-columns: 28px 1fr; gap: 10px; padding: 7px 0; }
+.badge {
+  width: 28px; height: 28px; border-radius: 9px; display: flex; align-items: center; justify-content: center;
+  background: var(--bg); font-weight: 700; font-size: 13px; color: var(--text);
+}
+.badge.A { background: var(--blue); color: #fff; }
+.note { color: var(--faint); font-size: 12px; margin-top: 22px; line-height: 1.6; }
+.nav { display: flex; justify-content: space-between; gap: 12px; margin-top: 18px; font-size: 14px; font-weight: 600; }
+.nav a { color: var(--blue-ink); }
+.index-wrap { max-width: 1080px; margin: 0 auto; padding: 36px 24px 80px; }
+.index-wrap h1 { font-size: 40px; margin: 6px 0 8px; }
+.lead { color: var(--muted); font-size: 16px; margin: 0 0 22px; }
+.search {
+  width: 100%; height: 52px; border: 0; border-radius: 16px; padding: 0 18px;
+  font: inherit; font-size: 16px; background: #fff; color: var(--ink); outline: none;
+}
+.grades { display: flex; gap: 8px; margin: 16px 0 22px; }
+.grades button {
+  height: 38px; padding: 0 14px; border: 0; border-radius: 999px; background: #fff;
+  font: inherit; font-weight: 700; color: var(--muted); cursor: pointer;
+}
+.grades button.on { background: var(--ink); color: #fff; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+.subj {
+  background: #fff; border-radius: 22px; padding: 18px 18px 8px;
+}
+.subj h3 { margin: 0 0 4px; font-size: 20px; letter-spacing: -0.03em; }
+.subj .meta { color: var(--faint); font-size: 13px; font-weight: 600; margin-bottom: 10px; }
+.item { display: flex; justify-content: space-between; gap: 10px; padding: 11px 0; border-top: 1px solid #f2f4f6; }
+.item span { color: var(--blue-ink); font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.pdf { display: inline-flex; margin: 8px 0 12px; color: var(--blue-ink); font-size: 13px; font-weight: 700; }
+@media (max-width: 640px) {
+  h1 { font-size: 26px; }
+  .index-wrap h1 { font-size: 30px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a href="../../index.html">소현중학교</a><span>2026학년도 2학기</span></div>
+  <div class="kicker">수행평가 평가 기준</div>
+  <h1>컵타 연주하기</h1>
+  <div class="chips"><span class="chip blue">2학년 음악</span><span class="chip blue">만점 25점</span><span class="chip">2학기</span><span class="chip">실험실습</span><span class="chip">교사 관찰 및 기록</span></div>
+  <section class="card"><h2>수행 과제</h2><p class="task"><b>01</b>자세와 연주법으로 표현하기</p><p class="task"><b>02</b>기본 리듬 동작과 변형 리듬 동작 연주하기</p><p class="task"><b>03</b>맞춰 정확한 빠르기로 연주하기</p><p class="task"><b>04</b>분위기에 어울리는 표현을 하며 조화롭게 연주하기</p></section>
+  <section class="card"><h2>평가 방법</h2><div class="methods"><span class="method">논술</span><span class="method">구술 발표</span><span class="method">토의토론</span><span class="method">프로젝트</span><span class="method on">실험실습</span><span class="method">포트폴리오</span><span class="method">기타</span><span class="method on">교사 관찰 및 기록</span><span class="method">자기평가</span><span class="method">동료평가</span></div></section>
+  <section class="card"><h2>채점 기준</h2><div class="element"><div class="el-head"><strong>바른 자세와 주법으로 연주하기</strong><span>5점</span></div><div class="row"><p>컵타 연주 시 허리를 바르게 편 안정된 자세를 유지하며, 컵을 쥐고 두드리는 바른 주법으로 표현함.</p><span class="score max">5</span></div><div class="row"><p>전반적으로 바른 자세와 주법을 유지하나, 연주 도중 간혹 자세가 흐트러지거나 주법이 불안정함.</p><span class="score">4</span></div><div class="row"><p>연주 자세가 불안정하고, 컵을 다루는 주법이 미숙함.</p><span class="score">3</span></div><div class="row"><p>자세가 매우 불안정하고 올바른 주법을 전혀 구체화하지 못하여 정상적인 연주 가 어려움.</p><span class="score">2</span></div></div><div class="element"><div class="el-head"><strong>기본 리듬 동작 연주하기</strong><span>5점</span></div><div class="row"><p>기본 리듬 동작을 전 구간에서 안정적으로 연주함.</p><span class="score max">5</span></div><div class="row"><p>기본 리듬 동작을 전반적으로 잘 수행하나, 연주 도중 1~2회 정도 가벼운 동작 실수가 발생함.</p><span class="score">4</span></div><div class="row"><p>기본 리듬 동작의 연결이 매끄럽지 못하거나, 박자를 놓쳐 동작을 자주 생략함.</p><span class="score">3</span></div><div class="row"><p>기본 리듬의 형태를 거의 기억하지 못하거나 박자에 맞춰 동작을 수행하지 못함.</p><span class="score">2</span></div></div><div class="element"><div class="el-head"><strong>변형 리듬 동작 연주하기</strong><span>5점</span></div><div class="row"><p>변형 리듬 동작을 전 구간에서 안정적으로 연주함.</p><span class="score max">5</span></div><div class="row"><p>변형 리듬 동작을 전반적으로 잘 수행하나, 연주 도중 1~2회 정도 가벼운 동작 실수가 발생함.</p><span class="score">4</span></div><div class="row"><p>변형 리듬 동작의 연결이 매끄럽지 못하거나, 박자를 놓쳐 동작을 자주 생략함.</p><span class="score">3</span></div><div class="row"><p>변형 리듬의 형태를 거의 기억하지 못하거나 박자에 맞춰 동작을 수행하지 못함.</p><span class="score">2</span></div></div><div class="element"><div class="el-head"><strong>박자 및 빠르기 맞추기</strong><span>5점</span></div><div class="row"><p>반주 음악에 맞춰 전 구간을 정확하고 일정한 빠르기로 흐트러짐 없이 연주함.</p><span class="score max">5</span></div><div class="row"><p>대체로 반주에 맞춰 연주하나, 일부 구간에서 빠르기가 다소 빨라지거나 느려짐</p><span class="score">4</span></div><div class="row"><p>반주와 연주의 빠르기가 자주 맞지 않아 많은 부분 박자를 놓침.</p><span class="score">3</span></div><div class="row"><p>일정한 빠르기를 전혀 유지하지 못하고 반주와 무관하게 독자적으로 연주함.</p><span class="score">2</span></div><div class="row"><p>곡의 분위기에 맞게 셈여림과 리듬의 강약을 살려 자연스럽게 표현함.</p><span class="score max">5</span></div><div class="row"><p>곡의 분위기에 맞게 연주하려고 노력하나, 음악적 표현이 다소 경직됨.</p><span class="score">4</span></div><div class="row"><p>곡의 분위기를 살린 음악적 표현이 거의 나타나지 않음.</p><span class="score">3</span></div><div class="row"><p>연주에 자신감이 없고 음악적 분위기와 전혀 어울리지 않는 표현을 함.</p><span class="score">2</span></div></div></section>
+  <section class="card"><h2>기본 점수와 미참여</h2><div class="footer-row"><span>기본점수</span><b>10점</b></div><div class="footer-row"><span>자발적 미참여자, 백지활동지 제출자</span><b>9점</b></div><div class="footer-row"><span>의한 수행평가 미참여자(장기미인정결석 등)</span><b>8점</b></div></section>
+  <section class="card"><h2>성취기준별 성취수준</h2><div class="std"><div class="code">[9음01-01]</div><div class="desc">다양한 주법과 표현 기법을 향상시켜 노래나 악기로 개성 있게 연주한다.</div><div class="lv"><div class="badge A">A</div><div>다양한 주법과 여러 음악의 고유한 표현 기법을 충분히 이해하여 음악적 표현을 살려노래나 악기로 개성 있게 연주한다.</div></div><div class="lv"><div class="badge B">B</div><div>다양한 주법과 여러 음악의 고유한 표현 기법을 이해하여 노래나 악기로 개성 있게연주한다.</div></div><div class="lv"><div class="badge C">C</div><div>다양한 주법과 여러 음악의 고유한 표현 기법을 부분적으로 이해하여 노래나 악기로연주한다.</div></div></div></section>
+  <p class="note">출처: 학교알리미 2026년 9월 공시(3차), 소현중학교 교과별 교수·학습 및 평가 계획. 원문 106쪽.<br><a href="2026-2학기-음악-교수학습및평가계획.pdf">과목 원문 PDF 열기</a></p>
+  <div class="nav"><a href="01-음악극의-이해와-비평.html">이전 · 음악극의 이해와 비평</a><a href="03-다양한-장르의-음악-노래하기.html">다양한 장르의 음악 노래하기 · 다음</a></div>
+</div>
+</body>
+</html>
